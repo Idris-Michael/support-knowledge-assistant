@@ -1,0 +1,587 @@
+{
+  "version": "18",
+  "base": "https://www.postgresql.org/docs/18/",
+  "fetched": "2026-11-20",
+  "pages": [
+    {
+      "page": "runtime",
+      "status": 200,
+      "sha256": "b3261f3fb3d746446d425a945fb22fb1fb330afd92399b62383b2c0f261864c1"
+    },
+    {
+      "page": "postgres-user",
+      "status": 200,
+      "sha256": "370183b010ea732e010d5a4af849349c830e1e3eae4baaea6d3aea10d1812da9"
+    },
+    {
+      "page": "creating-cluster",
+      "status": 200,
+      "sha256": "ff1b0774a404ea706a6924d4e084e10cdb08a002bf67e628494db0069b00cefe"
+    },
+    {
+      "page": "server-start",
+      "status": 200,
+      "sha256": "4552ea7125f5d2d09c0ec22c40234db41a9bc7ed29da4fbcc832ae7c1c45b873"
+    },
+    {
+      "page": "kernel-resources",
+      "status": 200,
+      "sha256": "e9dbb07167a84b4120404a8a9b44ccdec7156f9f728c28e521d832b32d6d4e56"
+    },
+    {
+      "page": "server-shutdown",
+      "status": 200,
+      "sha256": "d075b0030294791d0033a0934105c6498155b75000a626c54561c89d46855f78"
+    },
+    {
+      "page": "upgrading",
+      "status": 200,
+      "sha256": "dffa04da94f99eab4bd6710e6dde68c787189604ccb1129c94582abd29fb0207"
+    },
+    {
+      "page": "preventing-server-spoofing",
+      "status": 200,
+      "sha256": "9cb768aa0f852617a5e0137b8e5b7dd0ea529ee2edb127941d2b3fd22ba5a668"
+    },
+    {
+      "page": "encryption-options",
+      "status": 200,
+      "sha256": "d101ea5edba505cea814f670310e3803fd3d4ab88e48176e8b4b5cc37004723d"
+    },
+    {
+      "page": "ssl-tcp",
+      "status": 200,
+      "sha256": "fc82d7e56bd23ce8ec78766f22d58da6d68ad8f26a138a638b18a3d9a6bcc839"
+    },
+    {
+      "page": "gssapi-enc",
+      "status": 200,
+      "sha256": "1b66c04d355e917c1f11f9cb137b020c60be19c46cfd53acb2a4fdd8496c5a73"
+    },
+    {
+      "page": "ssh-tunnels",
+      "status": 200,
+      "sha256": "1679999578a22743a7bfeb701c5b52089dbe6a9aff7143b76b67ce3a2f05f1d8"
+    },
+    {
+      "page": "runtime-config",
+      "status": 200,
+      "sha256": "61569eab88bc8ce7ac4de4a2f28cace46e43fb083993c21a56f95e2ad43cccc8"
+    },
+    {
+      "page": "config-setting",
+      "status": 200,
+      "sha256": "44941b2e150b6aa3dfe99ae87cc5fddb31fabdb4064e25652659426891863907"
+    },
+    {
+      "page": "runtime-config-file-locations",
+      "status": 200,
+      "sha256": "b8e07900d972d2b7c0aa7b58b5079fd508b1e2c953bfd9929cc212986d350a57"
+    },
+    {
+      "page": "runtime-config-connection",
+      "status": 200,
+      "sha256": "6be937d19b8d68cf1d25953956fd706a269eca28918c343954aeecbacb599e11"
+    },
+    {
+      "page": "runtime-config-resource",
+      "status": 200,
+      "sha256": "3df0660e565d0afbd940c0fb51bca606df4b143c1e5436de601aa3e73c8f3475"
+    },
+    {
+      "page": "runtime-config-wal",
+      "status": 200,
+      "sha256": "240d7d2e68c35d20c83c1b551b99a6c8c89768bca446835f18075e5dd6ab645b"
+    },
+    {
+      "page": "runtime-config-replication",
+      "status": 200,
+      "sha256": "9e7b88c651413a9bf16d396fe6b15898f36f41b02ba3eb91d4edbbc6f242a69f"
+    },
+    {
+      "page": "runtime-config-query",
+      "status": 200,
+      "sha256": "5d776ae109c1b72aea13bb3612fc35bfd42fe99895e5a90694bc0e6cc0362a6c"
+    },
+    {
+      "page": "runtime-config-logging",
+      "status": 200,
+      "sha256": "56b26fe8b4e93a05aab71a19fd106649dbbf4d365450b09cc51ea309d511a1e4"
+    },
+    {
+      "page": "runtime-config-statistics",
+      "status": 200,
+      "sha256": "4b2409954e5b40c0940cb4eb96ed2a75d081bc0510a8ceb38ab78868f5529203"
+    },
+    {
+      "page": "runtime-config-vacuum",
+      "status": 200,
+      "sha256": "2b0732df606e550ea01f70e57ea0c6e72756f76e30217f2b603e9c5205f8e61d"
+    },
+    {
+      "page": "runtime-config-client",
+      "status": 200,
+      "sha256": "d9b2833991c913550bc212153a28c50169c42e46ff5b44e34cc007b62fee1edb"
+    },
+    {
+      "page": "runtime-config-locks",
+      "status": 200,
+      "sha256": "37b31b3557e9cdb2a992e5341b9a433195e37f849af2ba49bff03b1c12c97f67"
+    },
+    {
+      "page": "runtime-config-compatible",
+      "status": 200,
+      "sha256": "c7a05c446a4e449aadc96137dc4ec58618fdbda8bd4883c84792d0ddda436673"
+    },
+    {
+      "page": "runtime-config-error-handling",
+      "status": 200,
+      "sha256": "bf7abb1cd07f7ce9892de44bf328401424ec8a59c3eca117043dab0b015c7fc3"
+    },
+    {
+      "page": "runtime-config-preset",
+      "status": 200,
+      "sha256": "98a8cd5e2cdd71ffd22d53e0632091cf314ae12c2b667ab5d06ee71cc656ef3e"
+    },
+    {
+      "page": "runtime-config-custom",
+      "status": 200,
+      "sha256": "e9847b30d3bea53f61bf7a8b0ac065a115c373e3876ef70063e12881dc6364df"
+    },
+    {
+      "page": "runtime-config-short",
+      "status": 200,
+      "sha256": "5f2b3a4afa8453625fae80dd1586ec0e6e84c66d5ca9f167472ee8d20445ad82"
+    },
+    {
+      "page": "client-authentication",
+      "status": 200,
+      "sha256": "8761482691c707da52dd008127b223e97fca8ff9355d6f7bdc824514d3f2f80e"
+    },
+    {
+      "page": "auth-pg-hba-conf",
+      "status": 200,
+      "sha256": "dc164c482314884911025a83ce9bba72ed31a1def92c8c8200ba7d1328b726ab"
+    },
+    {
+      "page": "auth-username-maps",
+      "status": 200,
+      "sha256": "70725af98595547c21101433649906c73be330d7f98523fdf774ef06470d7c5a"
+    },
+    {
+      "page": "auth-methods",
+      "status": 200,
+      "sha256": "3036f5eea64da72848a91e2471783392cff959624ae317bc9e191edc3379351f"
+    },
+    {
+      "page": "auth-trust",
+      "status": 200,
+      "sha256": "73036827eb02f5e4daeb8e953a3a2378587ca3599884771e414dec7bf7804a61"
+    },
+    {
+      "page": "auth-password",
+      "status": 200,
+      "sha256": "56f5d54cebcd21ad2a23cb3b96e7f7ba0b07072f785a0b8ec1829b3b56eb2cda"
+    },
+    {
+      "page": "gssapi-auth",
+      "status": 200,
+      "sha256": "2a9f63a5bd46ad7c90fea37c89d6e1643d641f60f6203a418408542444a37225"
+    },
+    {
+      "page": "auth-ident",
+      "status": 200,
+      "sha256": "69d3a5a3d532ba51ce32c999b9b674ba57060b427327db3edee90875c07f7bd9"
+    },
+    {
+      "page": "auth-peer",
+      "status": 200,
+      "sha256": "0197ed9af0a954022fba352078a5ec33911514f3c0cef59f4ecc0e2852f2e98b"
+    },
+    {
+      "page": "auth-ldap",
+      "status": 200,
+      "sha256": "722ca5bf266d9775b7cda4a68eed7211e88a2873b3f380a13aaa76317a7f3fe3"
+    },
+    {
+      "page": "auth-cert",
+      "status": 200,
+      "sha256": "176659f1a408c8638c68d58285250e7bfc04c0756eb5cbf571316e7e25914322"
+    },
+    {
+      "page": "auth-pam",
+      "status": 200,
+      "sha256": "67c1a62991a01c3162c55740d13347f659e84aa720bda9b7ad79ea43e8e70401"
+    },
+    {
+      "page": "auth-oauth",
+      "status": 200,
+      "sha256": "f7dfda51c9df2ed3836743a95289e17cc7e145214f27620dd458effc1b554dc7"
+    },
+    {
+      "page": "client-authentication-problems",
+      "status": 200,
+      "sha256": "9e7ac281c07e18ac8f5f88e7d86d42a803128b3904280a81f281da2ab31d32bd"
+    },
+    {
+      "page": "user-manag",
+      "status": 200,
+      "sha256": "20617e9392d9d2361fbd45671cf6dc12d308b823bec6c0bd39c4e09755f4b361"
+    },
+    {
+      "page": "database-roles",
+      "status": 200,
+      "sha256": "6f056ea57855460b51d66f66d67754ae99958d7cdfff0dcab370f065e26a0655"
+    },
+    {
+      "page": "role-attributes",
+      "status": 200,
+      "sha256": "8845fabe55ecd98eac50280c231c0f03dbabdaf029a39b394a8e934a085aba72"
+    },
+    {
+      "page": "role-membership",
+      "status": 200,
+      "sha256": "6241bb1dfea9fb1477368a765a70d727e180d30fcc708c1e5465962c4049546b"
+    },
+    {
+      "page": "role-removal",
+      "status": 200,
+      "sha256": "91e891e9c2621f380e98aaaba4df48b67ecb1485d5479600df3a3a042af2f40e"
+    },
+    {
+      "page": "predefined-roles",
+      "status": 200,
+      "sha256": "eb40b8126bba2dba0aebe5e2a965a10dfa1e1a2c3ce3b76ec9ae4c1a53b1cdd4"
+    },
+    {
+      "page": "perm-functions",
+      "status": 200,
+      "sha256": "8e89a5eb801544ee256ffdb3f0505dff0bd03f1fe5916de3040c94b84dc943ed"
+    },
+    {
+      "page": "managing-databases",
+      "status": 200,
+      "sha256": "0d136fd6eb984691e8eb795d9cf9b615e6f9d6389baba2b0531d530acf06d252"
+    },
+    {
+      "page": "manage-ag-overview",
+      "status": 200,
+      "sha256": "b80b91cb282e8f0ac679e9614b2a71d2df1266dae52487994ef68cd8a0912749"
+    },
+    {
+      "page": "manage-ag-createdb",
+      "status": 200,
+      "sha256": "1674cea4817b7c6b1f7d99a174b615c96518459eca3b29c7b65d95ce1ab7fbca"
+    },
+    {
+      "page": "manage-ag-templatedbs",
+      "status": 200,
+      "sha256": "9ef6209d9f1195bb57c6509942f324ba8eba84125bf451e4bd87567f30c48b4a"
+    },
+    {
+      "page": "manage-ag-config",
+      "status": 200,
+      "sha256": "5ef3f3226c302af06efa0893de282ebb8b1d9061f9f4250fce8c1cbc9b563789"
+    },
+    {
+      "page": "manage-ag-dropdb",
+      "status": 200,
+      "sha256": "23a851b8ee7c8d92d7e9c0bf58f366689b2d1248ec801329a5573ca1eed6cd98"
+    },
+    {
+      "page": "manage-ag-tablespaces",
+      "status": 200,
+      "sha256": "799ad741c4ce649d68148b57da541ef0f727ea8c7ce8871776e940900e49b535"
+    },
+    {
+      "page": "charset",
+      "status": 200,
+      "sha256": "a21ca22378288fd1e8cef60d60b5dde9e102a69cddd283ba072a987f382ff518"
+    },
+    {
+      "page": "locale",
+      "status": 200,
+      "sha256": "34839d05edbc7583fb324ef4a3c7cef231e4b6f153e3dae16e2c057efb60e8a7"
+    },
+    {
+      "page": "collation",
+      "status": 200,
+      "sha256": "685fa8ce1b479e289c3ddb5af89a2aa22e0601f9ebb18e0d0976034ea7f8e470"
+    },
+    {
+      "page": "multibyte",
+      "status": 200,
+      "sha256": "370b660614383aba4e003dae8ce7d57d2fd85a603ab72d6e4ad8d3575c248e7c"
+    },
+    {
+      "page": "maintenance",
+      "status": 200,
+      "sha256": "2f6f6da1dbe84b071c4adfa2c557456132273b167c9abcae9aa039c6bc683d6d"
+    },
+    {
+      "page": "routine-vacuuming",
+      "status": 200,
+      "sha256": "f8a8eca1e310b50426d903e4150a1c1a0d805ca08919454a99fdaeada258219a"
+    },
+    {
+      "page": "routine-reindex",
+      "status": 200,
+      "sha256": "da371c4d12d9b43f8ee0b0aaf005dd08b31269dd90fa519632bfce15d36f4d5c"
+    },
+    {
+      "page": "logfile-maintenance",
+      "status": 200,
+      "sha256": "640bfaa15ab77c75c9dae169e34b055fc9d87f94e22f7f7237994acf93d6a532"
+    },
+    {
+      "page": "backup",
+      "status": 200,
+      "sha256": "7616c5b434df31cad0134d6bd23b9e3130551fe675b561fe858fa163eae740f4"
+    },
+    {
+      "page": "backup-dump",
+      "status": 200,
+      "sha256": "931a2caec295e5a14b73474624d3280edabcbce4a0897385af1d3f3540a681b4"
+    },
+    {
+      "page": "backup-file",
+      "status": 200,
+      "sha256": "11dd1712d97f5ad17e040ed15fb3e122ef4ffa09476d225bc1594c188f2df706"
+    },
+    {
+      "page": "continuous-archiving",
+      "status": 200,
+      "sha256": "8a94c67e7d1e687c2996a034a0f79ba4d1e81a21f73951efc3ece2dbffd1ceb3"
+    },
+    {
+      "page": "high-availability",
+      "status": 200,
+      "sha256": "a69d4fe5bde2799c682c377b75706fd8c4e27154be8495c2218c7762f3e1c652"
+    },
+    {
+      "page": "different-replication-solutions",
+      "status": 200,
+      "sha256": "9856245ec5b54115aa086e26c498ede874badbe02930ef05a9d62f13a4b0079b"
+    },
+    {
+      "page": "warm-standby",
+      "status": 200,
+      "sha256": "c1f87b4ca34681bf270b250470cdd912147746e4f5946d62c9f6e5af9acd2862"
+    },
+    {
+      "page": "warm-standby-failover",
+      "status": 200,
+      "sha256": "5bfb3ef5d660438fed088dff10b1b393ba8a7f638c956845a9028a19c46565e8"
+    },
+    {
+      "page": "hot-standby",
+      "status": 200,
+      "sha256": "c45ef92ef69f45ec90aa0d344652178b24a7ff0364d1e3c2a94d48d8c9060e3f"
+    },
+    {
+      "page": "monitoring",
+      "status": 200,
+      "sha256": "10595541bb771bad9b86821019270eb30acac7ad5030555fcecb97f0c54416b8"
+    },
+    {
+      "page": "monitoring-ps",
+      "status": 200,
+      "sha256": "1658d1ae2d48439c2b84cd1ab8aca69c5c3eb7a964905fdfce3e9b102f603589"
+    },
+    {
+      "page": "monitoring-stats",
+      "status": 200,
+      "sha256": "bafa7af0948735e6b1820742a8ec1f0a3c58aedcb9c164db375517c0df3175d2"
+    },
+    {
+      "page": "monitoring-locks",
+      "status": 200,
+      "sha256": "478d658654a9670f1eb8572a270518bbf5143d68fd4dce9f01760ed32aa154ba"
+    },
+    {
+      "page": "progress-reporting",
+      "status": 200,
+      "sha256": "33ca11bd6ad37af0b263243700d0b1538b594124ce9f03f54827b08d098c10f6"
+    },
+    {
+      "page": "diskusage",
+      "status": 200,
+      "sha256": "dde2f170e909cedbc2349208f2ebf19a9159989b1638e7b252902019ac47ad7a"
+    },
+    {
+      "page": "wal",
+      "status": 200,
+      "sha256": "6b66ff684638c6fe44b32022150c3db07a4c6731e52c99d4458a4432c34831bf"
+    },
+    {
+      "page": "wal-reliability",
+      "status": 200,
+      "sha256": "d6f1e5f2ad950e334f1d9977f964f3e91f31b1db350b6663fa0dcbb289a4c3eb"
+    },
+    {
+      "page": "checksums",
+      "status": 200,
+      "sha256": "cfd64088912eb81e992a5e26de5cde44d47a5544710bcb1c9d3d16e24b34513c"
+    },
+    {
+      "page": "wal-intro",
+      "status": 200,
+      "sha256": "84edaa2b0aa27ae7c007a0f8ab88277c888d60f02cc9da0ea5f21b8163f57227"
+    },
+    {
+      "page": "wal-async-commit",
+      "status": 200,
+      "sha256": "f475a200fd40eae4d1e262c3ea1460946eb4e5e150543b96c53b89e63bc34ace"
+    },
+    {
+      "page": "wal-configuration",
+      "status": 200,
+      "sha256": "a89b15b382c2a182b2f5c9e9073300d44cbda70eb15a66c7954a4c306b464b5d"
+    },
+    {
+      "page": "wal-internals",
+      "status": 200,
+      "sha256": "4c13a60b5b6b255608e1f52bb8d389321a5e76b752766f4ec3c9ea57c2778bd8"
+    },
+    {
+      "page": "logical-replication",
+      "status": 200,
+      "sha256": "857f92dfab9227490c6563166ba77c9346b06ca8390f0ffbd160533fedc93603"
+    },
+    {
+      "page": "logical-replication-publication",
+      "status": 200,
+      "sha256": "58ad7190e3e8f673820734ef609ff09d3b845da5d7eca864d62c4189c3f19b7b"
+    },
+    {
+      "page": "logical-replication-subscription",
+      "status": 200,
+      "sha256": "fd4a059a2435fe7615cdb5ff28dc412109572050606f1167db1831eea7744c4c"
+    },
+    {
+      "page": "logical-replication-failover",
+      "status": 200,
+      "sha256": "55de82db1df1f76ff01fb4994d3d9c61bce50cdbd3e02389e82cb3142273086f"
+    },
+    {
+      "page": "logical-replication-row-filter",
+      "status": 200,
+      "sha256": "60389b0b12d44efce410163f120ee9ef8d897e49de03ae48a49807287baa047c"
+    },
+    {
+      "page": "logical-replication-col-lists",
+      "status": 200,
+      "sha256": "27318e3c8922a1b6568e048e42e9b47d317c3dc41a202fa6557abbcce5e824fa"
+    },
+    {
+      "page": "logical-replication-gencols",
+      "status": 200,
+      "sha256": "e1c560aab467f53268c81f0a712ae652d066a9c35bee601f159db7b2514b450b"
+    },
+    {
+      "page": "logical-replication-conflicts",
+      "status": 200,
+      "sha256": "6205c58eeb0e0e4a47aafd1fe0533ba72675fc7c287cf7a6e5d37a1562396e07"
+    },
+    {
+      "page": "logical-replication-restrictions",
+      "status": 200,
+      "sha256": "a00f1d6723d96dc0ab194f23823b8051a735d0b4b3756a708e42038ed8a57254"
+    },
+    {
+      "page": "logical-replication-architecture",
+      "status": 200,
+      "sha256": "ac83f457809dd4777ff0964f6f21a3c01b297232996cf55cd3b103fb4f67ce8f"
+    },
+    {
+      "page": "logical-replication-monitoring",
+      "status": 200,
+      "sha256": "37fea7bbbb1ad4155583481bf030bc283f2476cd79940a6f07cbb005f87d1539"
+    },
+    {
+      "page": "logical-replication-security",
+      "status": 200,
+      "sha256": "10c9c73a76656a3dae5ca3021f04c76aeee6f52f4776006b1f9de0f10537139c"
+    },
+    {
+      "page": "logical-replication-config",
+      "status": 200,
+      "sha256": "ad663fef19cffef546d38c913c91ca67376032db6a7a3a3a1ffa875092c865e2"
+    },
+    {
+      "page": "logical-replication-upgrade",
+      "status": 200,
+      "sha256": "5269384503384fe14cc98c2adea12db7f01f75cfbb9275256443b79dc0ef3a65"
+    },
+    {
+      "page": "logical-replication-quick-setup",
+      "status": 200,
+      "sha256": "c977518525d7d8eaf00cb8592176c8bff8d8ceb270b4555b5f5f3fdb605bb065"
+    },
+    {
+      "page": "app-pgdump",
+      "status": 200,
+      "sha256": "3ab0c85b1dd0d35a53032b5ba35f5c12ca1cb5f95af9a56d563589a2c3b2eafc"
+    },
+    {
+      "page": "app-pg-dumpall",
+      "status": 200,
+      "sha256": "8620ab6f07322bdcbd4bb7b30462210ae79dd9b7f0fea80b78305f9fad6d4e65"
+    },
+    {
+      "page": "app-pgrestore",
+      "status": 200,
+      "sha256": "34ec8878f44c8de1c811165e525000223f99d0271c0892493c8f53c0062636a7"
+    },
+    {
+      "page": "app-pgbasebackup",
+      "status": 200,
+      "sha256": "af8d7a74b6f25f7955cc5c5c0ad46da9b123301a9394fb4e02dd69462f228008"
+    },
+    {
+      "page": "app-pg-ctl",
+      "status": 200,
+      "sha256": "61cb51baed901da4e8f537ec00b078de116f782112e9ebd016efe49f0b205c03"
+    },
+    {
+      "page": "pgupgrade",
+      "status": 200,
+      "sha256": "4b96b89648448031881721d5cd05e0b494c506829a4e511812763e90fbd43bbb"
+    },
+    {
+      "page": "sql-vacuum",
+      "status": 200,
+      "sha256": "b3296ee8d5aa03a569aff0089aaeab4ea06bf93edd42a5edec792dbb0a3d3b36"
+    },
+    {
+      "page": "sql-analyze",
+      "status": 200,
+      "sha256": "3662b60482a011bd16d2e2dac86d52daad3983cb0ae92bb45b9217827336a913"
+    },
+    {
+      "page": "sql-reindex",
+      "status": 200,
+      "sha256": "9018b2ffb45e70c5fa68f1c8e71774af88c3c067f724b5a9cba81e62565a298a"
+    },
+    {
+      "page": "sql-altersystem",
+      "status": 200,
+      "sha256": "d8fb0b5217991357bdf52456ef61ba96d6de8f46dd06a0342bfa1e876370ba61"
+    },
+    {
+      "page": "sql-createrole",
+      "status": 200,
+      "sha256": "275fc3eca7feb281fa1be2773cbac735faf3712f21cfc68d20873cc8ae16aba8"
+    },
+    {
+      "page": "sql-grant",
+      "status": 200,
+      "sha256": "1c029084e021cdc9512f6a2dc1c69020519045f1de3fdbbea0a451086f82f7e0"
+    },
+    {
+      "page": "errcodes-appendix",
+      "status": 200,
+      "sha256": "4befbd308ac03c2f065c7cc170721be9c5af795dcf2356026f92251c11528672"
+    }
+  ]
+}
