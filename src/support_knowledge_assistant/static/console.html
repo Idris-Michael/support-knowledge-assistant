@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f4f2ec; --panel: #fffdf8; --ink: #191a1d; --muted: #6b6d73; --rule: #e0ddd4;
+  --accent: #1d5c4f; --accent-ink: #f1f8f5; --accent-soft: #e2efe9; --focus: #2f7d6b;
+  --refuse: #8a4b12; --refuse-bg: #f7ead9; --error: #a3261f; --error-bg: #f7e1de;
+  --serif: "Newsreader", Georgia, serif; --sans: "Instrument Sans", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #121513; --panel: #191d1b; --ink: #e7e5df; --muted: #9b9e9a; --rule: #2b302d;
+    --accent: #7fc9b4; --accent-ink: #0c1a16; --accent-soft: #1b2a25; --focus: #9fdcca;
+    --refuse: #eab37a; --refuse-bg: #2c2216; --error: #f08a80; --error-bg: #331a18; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.55 var(--sans); }
+button, input, textarea, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+header { display: flex; align-items: baseline; gap: 18px; padding: 18px 28px 14px; border-bottom: 1px solid var(--rule); flex-wrap: wrap; }
+h1 { font: 600 22px/1.2 var(--sans); letter-spacing: -0.02em; margin: 0; }
+h1 small { font-weight: 400; color: var(--muted); font-size: 14px; margin-left: 8px; letter-spacing: 0; }
+.who { margin-left: auto; display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); }
+.role { font: 500 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; padding: 5px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); }
+.link { background: none; border: 0; color: var(--accent); cursor: pointer; padding: 0; text-decoration: underline; text-underline-offset: 3px; }
+main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 440px); min-height: calc(100vh - 64px); }
+@media (max-width: 920px) { main { grid-template-columns: 1fr; } aside { border-left: 0; border-top: 1px solid var(--rule); } }
+section.desk { padding: 28px clamp(16px, 4vw, 56px) 48px; max-width: 860px; }
+aside { border-left: 1px solid var(--rule); padding: 24px 22px 40px; background: color-mix(in srgb, var(--panel) 55%, var(--paper)); }
+label.k, h2 { font: 500 12px/1 var(--sans); color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 10px; display: block; }
+textarea { width: 100%; min-height: 96px; resize: vertical; border: 1px solid var(--rule); border-radius: 10px; background: var(--panel); padding: 12px 14px; font: 17px/1.5 var(--serif); }
+.row { display: flex; gap: 10px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+.btn { border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink); border-radius: 8px; padding: 8px 18px; cursor: pointer; font-weight: 600; }
+.btn[disabled] { opacity: .55; cursor: progress; }
+.hint { font-size: 12px; color: var(--muted); }
+.samples { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.samples button { border: 1px solid var(--rule); background: transparent; border-radius: 999px; padding: 4px 12px; font-size: 13px; cursor: pointer; color: var(--muted); }
+.samples button:hover { color: var(--ink); border-color: var(--muted); }
+article.answer { margin-top: 30px; border-top: 2px solid var(--ink); padding-top: 18px; }
+.verdict { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+.verdict b { font: 600 13px/1 var(--mono); text-transform: uppercase; letter-spacing: .1em; padding: 6px 9px; border-radius: 4px; }
+.verdict b.answered { background: var(--accent-soft); color: var(--accent); }
+.verdict b.refused { background: var(--refuse-bg); color: var(--refuse); }
+.verdict b.error { background: var(--error-bg); color: var(--error); }
+.verdict span { color: var(--muted); font-size: 13px; }
+.q { font: italic 18px/1.4 var(--serif); color: var(--muted); margin: 14px 0 6px; }
+.body { font: 19px/1.62 var(--serif); margin: 10px 0 0; }
+.body p { margin: 0 0 12px; }
+a.cite { display: inline-block; min-width: 1.5em; text-align: center; font: 500 12px/1.5 var(--mono); padding: 0 4px; margin: 0 1px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); text-decoration: none; vertical-align: 2px; }
+a.cite:hover { background: var(--accent); color: var(--accent-ink); }
+ol.refs { list-style: none; padding: 0; margin: 22px 0 0; border-top: 1px solid var(--rule); }
+ol.refs li { display: grid; grid-template-columns: 2.2em 1fr; gap: 6px; padding: 10px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+ol.refs li > span { font: 500 12px/1.9 var(--mono); color: var(--accent); }
+ol.refs a { color: var(--ink); }
+.tag { font: 500 10px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; padding: 3px 6px; border-radius: 3px; border: 1px solid var(--rule); color: var(--muted); margin-left: 6px; }
+.steps { display: flex; height: 26px; border-radius: 6px; overflow: hidden; margin: 6px 0 4px; background: var(--rule); }
+.steps div { display: flex; align-items: center; justify-content: center; font: 500 10px/1 var(--mono); color: var(--accent-ink); background: var(--accent); border-right: 1px solid var(--panel); min-width: 3px; white-space: nowrap; overflow: hidden; }
+.steps div:nth-child(even) { background: color-mix(in srgb, var(--accent) 70%, var(--panel)); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font: 11px/1.4 var(--mono); color: var(--muted); margin-bottom: 22px; }
+ul.sources { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+ul.sources li { border: 1px solid var(--rule); border-radius: 8px; padding: 10px 12px; background: var(--panel); scroll-margin-top: 16px; }
+ul.sources li.used { border-color: color-mix(in srgb, var(--accent) 55%, var(--rule)); box-shadow: inset 3px 0 0 var(--accent); }
+ul.sources li:target { outline: 2px solid var(--focus); }
+.src-head { display: flex; gap: 8px; align-items: baseline; }
+.src-n { font: 600 12px/1 var(--mono); color: var(--accent); }
+.src-h { font-weight: 600; font-size: 14px; line-height: 1.35; }
+.src-id { font: 11px/1.4 var(--mono); color: var(--muted); word-break: break-all; margin-top: 4px; }
+.ranks { display: flex; gap: 10px; font: 11px/1 var(--mono); color: var(--muted); margin-top: 6px; }
+.ranks .u { color: var(--accent); font-weight: 600; }
+.empty { color: var(--muted); font-size: 14px; }
+dialog { border: 1px solid var(--rule); border-radius: 12px; background: var(--panel); color: var(--ink); padding: 22px; width: min(440px, calc(100vw - 32px)); }
+dialog::backdrop { background: rgb(0 0 0 / .35); }
+dialog input { width: 100%; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); padding: 9px 11px; font: 13px var(--mono); }
+dialog p { margin: 0 0 14px; font-size: 14px; color: var(--muted); }
+.err { color: var(--error); font-size: 13px; min-height: 1.3em; margin: 8px 0 0; }
+table.log { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+table.log td, table.log th { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.log th { font: 500 11px/1 var(--sans); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { article.answer { animation: rise .25s ease-out; } @keyframes rise { from { opacity: 0; transform: translateY(6px); } } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Support Desk <small>answers from the PostgreSQL 18 docs and the desk's notes, with sources</small></h1>
+  <div class="who" id="who" hidden><span id="who-name"></span><span class="role" id="who-role"></span><button class="link" id="switch">Change token</button></div>
+</header>
+<main>
+  <section class="desk">
+    <form id="ask">
+      <label class="k" for="question">Customer question</label>
+      <textarea id="question" maxlength="2000" required placeholder="Paste the question from the ticket"></textarea>
+      <div class="row">
+        <button class="btn" id="go" type="submit">Ask</button>
+        <span class="hint">Ctrl+Enter. Personal data is removed before anything is searched or sent to a model.</span>
+      </div>
+      <div class="samples" aria-label="Example questions">
+        <button type="button">We delete old rows every night but the table keeps using more disk space. Why?</button>
+        <button type="button">Our job failed with SQLSTATE 40P01. What does that code mean?</button>
+        <button type="button">Which port is the connection pooler on?</button>
+        <button type="button">What is the break-glass procedure for superuser access?</button>
+      </div>
+    </form>
+    <div id="out" aria-live="polite"></div>
+    <section id="log" hidden style="margin-top:40px">
+      <h2>Answer log <button class="link" id="reload" type="button" style="margin-left:8px;text-transform:none;letter-spacing:0">Refresh</button></h2>
+      <div id="log-body"></div>
+    </section>
+  </section>
+  <aside>
+    <h2>Evidence</h2>
+    <div id="evidence"><p class="empty">Ask a question to see which sections were found, which ones the grader kept, and how long each step took.</p></div>
+  </aside>
+</main>
+<dialog id="login">
+  <form method="dialog" id="login-form">
+    <label class="k" for="token">API token</label>
+    <p>Each token belongs to one person and one role (customer, support or SRE). The role decides which documents can be searched.</p>
+    <input id="token" type="password" autocomplete="off" required minlength="24">
+    <p class="err" id="login-err"></p>
+    <div class="row"><button class="btn" type="submit">Sign in</button></div>
+  </form>
+</dialog>
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const store = {
+  get() { try { return sessionStorage.getItem("ska-token") || ""; } catch { return ""; } },
+  set(v) { try { sessionStorage.setItem("ska-token", v); } catch { /* private mode: keep in memory */ } memo = v; },
+};
+let memo = store.get();
+
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+function safeUrl(u) { return /^https?:\/\//i.test(u) ? u : null; }
+
+async function api(path, opts = {}) {
+  const res = await fetch(path, { ...opts, headers: { "content-type": "application/json", authorization: `Bearer ${memo}`, ...(opts.headers || {}) } });
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) throw Object.assign(new Error(body.detail || res.statusText), { status: res.status });
+  return body;
+}
+
+async function signIn(token) {
+  memo = token;
+  const me = await api("/v1/me");
+  store.set(token);
+  $("who-name").textContent = me.name;
+  $("who-role").textContent = me.role;
+  $("who").hidden = false;
+  $("log").hidden = me.role !== "sre";
+  if (me.role === "sre") loadLog();
+}
+
+$("login-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  try { await signIn($("token").value.trim()); $("login").close(); $("login-err").textContent = ""; }
+  catch (err) { $("login-err").textContent = err.status === 401 ? "That token was not recognised." : err.message; }
+});
+$("switch").addEventListener("click", () => { $("token").value = ""; $("login").showModal(); });
+
+function renderAnswer(text) {
+  // Escape first, then turn [n] into links to the evidence panel. Nothing from the model is parsed as HTML.
+  return esc(text).split(/\n{2,}/).map((para) =>
+    `<p>${para.replace(/\n/g, "<br>").replace(/\[(\d+)\]/g, '<a class="cite" href="#src-$1" aria-label="source $1">$1</a>')}</p>`).join("");
+}
+
+function show(q, r) {
+  const label = { answered: "Answered", refused: "Refused", error: "Error" }[r.outcome] || r.outcome;
+  const why = r.reason ? ` · ${esc(r.reason.replace(/_/g, " "))}` : "";
+  const red = Object.keys(r.redactions || {}).length ? ` · removed: ${esc(Object.entries(r.redactions).map(([k, v]) => `${v} ${k}`).join(", "))}` : "";
+  const refs = (r.citations || []).map((c) => {
+    const url = safeUrl(c.url);
+    const title = url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(c.heading)}</a>` : `${esc(c.heading)}<span class="tag">internal note</span>`;
+    return `<li><span>[${c.n}]</span><div>${title}</div></li>`;
+  }).join("");
+  $("out").innerHTML = `<article class="answer">
+    <div class="verdict"><b class="${esc(r.outcome)}">${esc(label)}</b><span>${(r.latency_ms / 1000).toFixed(1)} s${why}${red}</span></div>
+    <p class="q">“${esc(q)}”</p>
+    <div class="body">${renderAnswer(r.answer)}</div>
+    ${refs ? `<ol class="refs">${refs}</ol>` : ""}</article>`;
+
+  const total = Math.max(1, (r.steps || []).reduce((a, s) => a + s.ms, 0));
+  const bars = (r.steps || []).map((s) => `<div style="flex:${Math.max(s.ms, total * 0.01)}" title="${esc(s.step)} ${s.ms} ms">${s.ms / total > 0.12 ? esc(s.step) : ""}</div>`).join("");
+  const legend = (r.steps || []).map((s) => `<span>${esc(s.step)} ${s.ms} ms</span>`).join("");
+  const sources = (r.sources || []).map((s) => `<li id="src-${s.n}" class="${s.used ? "used" : ""}">
+      <div class="src-head"><span class="src-n">${s.n}</span><span class="src-h">${esc(s.heading)}</span></div>
+      <div class="src-id">${esc(s.section_id)}</div>
+      <div class="ranks"><span class="${s.used ? "u" : ""}">${s.used ? "used by grader" : "not used"}</span>
+        <span>keyword #${s.keyword_rank ?? "–"}</span><span>vector #${s.vector_rank ?? "–"}</span>
+        ${s.distance != null ? `<span>dist ${s.distance}</span>` : ""}</div></li>`).join("");
+  $("evidence").innerHTML = `<label class="k">Steps</label><div class="steps">${bars}</div><div class="legend">${legend}</div>
+    <label class="k">Sources found (${(r.sources || []).length})</label>
+    ${sources ? `<ul class="sources">${sources}</ul>` : '<p class="empty">Nothing this role may read matched the question.</p>'}`;
+}
+
+$("ask").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const q = $("question").value.trim();
+  if (!q) return;
+  $("go").disabled = true; $("go").textContent = "Searching…";
+  try { show(q, await api("/v1/ask", { method: "POST", body: JSON.stringify({ question: q }) })); if (!$("log").hidden) loadLog(); }
+  catch (err) {
+    if (err.status === 401) { $("login").showModal(); }
+    $("out").innerHTML = `<article class="answer"><div class="verdict"><b class="error">Error</b><span>${esc(err.message)}</span></div></article>`;
+  } finally { $("go").disabled = false; $("go").textContent = "Ask"; }
+});
+$("question").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) $("ask").requestSubmit(); });
+document.querySelectorAll(".samples button").forEach((b) => b.addEventListener("click", () => { $("question").value = b.textContent; $("question").focus(); }));
+
+async function loadLog() {
+  try {
+    const rows = await api("/v1/answers?limit=20");
+    $("log-body").innerHTML = rows.length ? `<table class="log"><thead><tr><th>When</th><th>Who</th><th>Question (redacted)</th><th>Outcome</th></tr></thead><tbody>${
+      rows.map((a) => `<tr><td>${esc(new Date(a.at).toLocaleTimeString("en-GB"))}</td><td>${esc(a.principal)} <span class="tag">${esc(a.role)}</span></td><td>${esc(a.question)}</td><td>${esc(a.outcome)}${a.reason ? ` · ${esc(a.reason)}` : ""}</td></tr>`).join("")}</tbody></table>` : '<p class="empty">No questions yet.</p>';
+  } catch (err) { $("log-body").textContent = err.message; }
+}
+$("reload").addEventListener("click", loadLog);
+
+if (memo) signIn(memo).catch(() => $("login").showModal()); else $("login").showModal();
+</script>
+</body>
+</html>

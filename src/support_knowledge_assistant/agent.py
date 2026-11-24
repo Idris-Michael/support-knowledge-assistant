@@ -167,9 +167,9 @@ class Assistant:
         question = " ".join(r.text.split())
         update: State = {"question": question, "redactions": r.counts}
         if not question:
-            update.update(outcome="refused", reason="empty_question")
+            update["outcome"], update["reason"] = "refused", "empty_question"
         elif len(question) > MAX_QUESTION_CHARS:
-            update.update(outcome="refused", reason="question_too_long")
+            update["outcome"], update["reason"] = "refused", "question_too_long"
         update["steps"] = self._step(state, "guard", started, redactions=r.counts)
         return update
 
@@ -179,7 +179,7 @@ class Assistant:
             hits = self.retrieve(state["question"], state["groups"])
         update: State = {"hits": hits, "steps": self._step(state, "retrieve", started, sections=len(hits))}
         if not hits:
-            update.update(outcome="refused", reason="no_documents")
+            update["outcome"], update["reason"] = "refused", "no_documents"
         return update
 
     def _grade(self, state: State) -> State:
@@ -193,9 +193,9 @@ class Assistant:
             "steps": self._step(state, "grade", started, relevant=relevant, **_usage(reply)),
         }
         if relevant is None:
-            update.update(outcome="error", reason="grader_unreadable")
+            update["outcome"], update["reason"] = "error", "grader_unreadable"
         elif not relevant:
-            update.update(outcome="refused", reason="nothing_relevant")
+            update["outcome"], update["reason"] = "refused", "nothing_relevant"
         return update
 
     def _answer(self, state: State) -> State:

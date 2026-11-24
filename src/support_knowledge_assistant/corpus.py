@@ -115,7 +115,11 @@ def heading_tag(div: Tag) -> Tag | None:
     """The section's own heading: the first h1–h5 that belongs to this section and is not the title
     of a note, table or example inside it."""
     for h in div.find_all(["h1", "h2", "h3", "h4", "h5"]):
-        if h.find_parent(_is_section) in (div, None) and not h.find_parent(class_=BOXES):
+        if (
+            isinstance(h, Tag)
+            and h.find_parent(_is_section) in (div, None)
+            and not h.find_parent(class_=BOXES)
+        ):
             return h
     return None
 

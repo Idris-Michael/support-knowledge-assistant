@@ -46,6 +46,8 @@ dev = [
 
 [project.scripts]
 ska = "support_knowledge_assistant.cli:main"
+ska-api = "support_knowledge_assistant.api:main"
+ska-llm-proxy = "support_knowledge_assistant.llm_proxy:main"
 
 [tool.ruff]
 line-length = 110
