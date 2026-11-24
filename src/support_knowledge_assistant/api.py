@@ -16,7 +16,7 @@ import threading
 import time
 from collections import defaultdict, deque
 from collections.abc import Callable
-from importlib import resources
+from pathlib import Path
 from typing import Annotated, Any
 
 import structlog
@@ -136,7 +136,7 @@ def create_app(settings: Settings, assistant: Assistant, engine: Engine | None =
 
     @app.get("/", response_class=HTMLResponse)
     def console() -> HTMLResponse:
-        page = resources.files("support_knowledge_assistant").joinpath("static/console.html")
+        page = Path(__file__).parent / "static" / "console.html"
         return HTMLResponse(page.read_text("utf-8"), headers={"Content-Security-Policy": CONSOLE_CSP})
 
     @app.get("/v1/me")

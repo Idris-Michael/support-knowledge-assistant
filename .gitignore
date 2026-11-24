@@ -9,3 +9,6 @@ coverage.xml
 .env
 bench/out/
 *.egg-info/
+.terraform/
+*.tfstate
+*.tfstate.*

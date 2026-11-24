@@ -1,0 +1,10 @@
+# Access control, redaction and the answer rules decide what an asker can see and what they are told.
+*                                                   @Idris-Michael
+/src/support_knowledge_assistant/retrieve.py        @Idris-Michael
+/src/support_knowledge_assistant/adapters.py        @Idris-Michael
+/src/support_knowledge_assistant/config.py          @Idris-Michael
+/src/support_knowledge_assistant/redact.py          @Idris-Michael
+/src/support_knowledge_assistant/agent.py           @Idris-Michael
+/corpus/internal/                                   @Idris-Michael
+/bench/questions.jsonl                              @Idris-Michael
+/infra/                                             @Idris-Michael
