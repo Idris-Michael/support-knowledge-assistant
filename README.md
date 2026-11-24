@@ -8,7 +8,9 @@ question, and nobody can receive a note above their access level. Built with Lan
 LangChain on Postgres (pgvector and full-text search), Claude for grading and writing, and local
 embeddings.
 
-![The Support Desk console: a cited answer about disk space after nightly deletes, beside the five retrieved sections, which ones the grader used, and how long each step took](docs/console.png)
+![54-second live run: a support agent gets a cited answer, then an answer from an internal note; a customer asking the same question gets a refusal; an off-topic question is refused](docs/demo.gif)
+
+<sub>A live run in real time (54 s): the API, Postgres and the indexer in Docker, Claude answering through the host proxy.</sub>
 
 > Framed as a pilot for a **fictional** UK managed-Postgres host, Larkspur Data
 > ([brief](docs/engagement/brief.md)). The documentation is the real PostgreSQL manual; the internal
@@ -39,6 +41,8 @@ exact names, so I expected hybrid to be best. On this set vector search was ahea
 keyword side adds loosely matching candidates on long, conversational questions. Vector is the
 default and all three modes stay available ([ADR 2](docs/adr/0002-retrieval-mode-chosen-by-measurement.md)).
 Nothing was tuned on the test questions.
+
+![The Support Desk console: a cited answer about disk space after nightly deletes, beside the five retrieved sections, which ones the grader used, and how long each step took](docs/console.png)
 
 ## How it works
 
