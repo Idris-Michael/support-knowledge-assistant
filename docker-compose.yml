@@ -55,7 +55,7 @@ services:
       index: { condition: service_completed_successfully }
 
   jaeger:
-    image: jaegertracing/jaeger:2.11.0
+    image: jaegertracing/jaeger:2.23.0
     ports: ["127.0.0.1:16686:16686"]  # UI; OTLP (4318) stays on the compose network
 
 volumes:
