@@ -4,8 +4,8 @@ Run of 24 November 2026: `LLM_MODE=claude-cli`, grader Claude Haiku 5.5, writer 
 retrieval `vector`. Full text of every answer: [`answers.json`](answers.json).
 
 **Checked by Claude**, reading each answer against the sections it cites and the PostgreSQL 18 docs.
-The checker is the same model family as the writer, so this is not an independent check; a person
-reviewed a random sample of ten questions as well ([`spot_check.md`](spot_check.md)).
+The checker is the same model family as the writer, so this is not an independent check. A random
+sample of ten questions is set aside for a person's review ([`spot_check.md`](spot_check.md)).
 
 ## Answered (47)
 
