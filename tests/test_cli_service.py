@@ -10,7 +10,7 @@ from sqlalchemy.engine import Engine
 
 from support_knowledge_assistant import cli, corpus, telemetry
 from support_knowledge_assistant.config import Principal, Settings
-from support_knowledge_assistant.embeddings import PrefixedEmbeddings, make_embeddings
+from support_knowledge_assistant.embeddings import HashEmbeddings, PrefixedEmbeddings, make_embeddings
 from support_knowledge_assistant.indexer import index
 from support_knowledge_assistant.service import build_assistant
 from tests.test_corpus import PAGE
@@ -39,6 +39,8 @@ def test_nomic_task_prefixes_are_added() -> None:
     assert inner.docs == ["search_document: max_wal_size"]
     assert inner.queries == ["search_query: is it a hard limit"]
     assert isinstance(make_embeddings(Settings()), PrefixedEmbeddings)
+    hashed = make_embeddings(Settings(embed_provider="hash"))
+    assert isinstance(hashed, HashEmbeddings) and len(hashed.embed_query("a b")) == 768
 
 
 def test_corpus_build_command(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:

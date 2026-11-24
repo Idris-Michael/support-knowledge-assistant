@@ -30,7 +30,7 @@ h1 small { font-weight: 400; color: var(--muted); font-size: 14px; margin-left: 
 .role { font: 500 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; padding: 5px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); }
 .link { background: none; border: 0; color: var(--accent); cursor: pointer; padding: 0; text-decoration: underline; text-underline-offset: 3px; }
 main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 440px); min-height: calc(100vh - 64px); }
-@media (max-width: 920px) { main { grid-template-columns: 1fr; } aside { border-left: 0; border-top: 1px solid var(--rule); } }
+@media (max-width: 920px) { main { grid-template-columns: minmax(0, 1fr); } aside { border-left: 0; border-top: 1px solid var(--rule); } }
 section.desk { padding: 28px clamp(16px, 4vw, 56px) 48px; max-width: 860px; }
 aside { border-left: 1px solid var(--rule); padding: 24px 22px 40px; background: color-mix(in srgb, var(--panel) 55%, var(--paper)); }
 label.k, h2 { font: 500 12px/1 var(--sans); color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 10px; display: block; }

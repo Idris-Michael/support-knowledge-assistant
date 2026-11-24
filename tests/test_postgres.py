@@ -2,39 +2,20 @@
 
 from __future__ import annotations
 
-import hashlib
-
 import pytest
-from langchain_core.embeddings import Embeddings
 from sqlalchemy import text
 from sqlalchemy.engine import Engine
 
 from support_knowledge_assistant.config import ROLE_GROUPS
 from support_knowledge_assistant.corpus import Section
+from support_knowledge_assistant.embeddings import HashEmbeddings
 from support_knowledge_assistant.indexer import CHUNK_CHARS, chunk_sections, index
 from support_knowledge_assistant.retrieve import HybridRetriever, rrf, search
 
 pytestmark = pytest.mark.integration
 
 
-class HashEmbedding(Embeddings):
-    """Deterministic 768-d vectors from word hashes: texts sharing words point the same way."""
-
-    def _vec(self, text: str) -> list[float]:
-        v = [0.0] * 768
-        for word in text.lower().split():
-            v[int(hashlib.sha256(word.encode()).hexdigest(), 16) % 768] += 1.0
-        v[0] += 1e-3  # never the zero vector (cosine distance would be undefined)
-        return v
-
-    def embed_documents(self, texts: list[str]) -> list[list[float]]:
-        return [self._vec(t) for t in texts]
-
-    def embed_query(self, text: str) -> list[float]:
-        return self._vec(text)
-
-
-EMB = HashEmbedding()
+EMB = HashEmbeddings()
 
 
 def sec(sid: str, body: str, acl: list[str] | None = None) -> Section:

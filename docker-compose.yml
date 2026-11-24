@@ -1,18 +1,62 @@
+# docker compose up -d       Postgres (pgvector), migrations, index, API + console, Jaeger
+#
+# Embeddings come from Ollama on the host (nomic-embed-text). Answers come from the model in .env:
+# LLM_MODE=offline needs nothing; LLM_MODE=proxy uses Claude through `ska-llm-proxy` on the host.
+name: support-knowledge-assistant
+
+x-app: &app
+  build: .
+  image: support-knowledge-assistant:local
+  env_file: .env
+  environment: &app-env
+    DATABASE_URL: postgresql+psycopg://ska:${POSTGRES_PASSWORD:-ska}@db:5432/ska
+    # Fixed here, not taken from .env: inside a container the host is host.docker.internal.
+    OLLAMA_URL: http://host.docker.internal:11434
+    LLM_PROXY_URL: http://host.docker.internal:8091
+    OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318
+  extra_hosts:
+    - "host.docker.internal:host-gateway"  # reach Ollama and the LLM proxy on Linux too
+
 services:
   db:
     image: pgvector/pgvector:pg18
     environment:
       POSTGRES_USER: ska
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ska}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ska}  # local only; deployed: Key Vault / Secrets Manager
       POSTGRES_DB: ska
     ports:
-      - "127.0.0.1:${DB_PORT:-5434}:5432"
+      - "127.0.0.1:${DB_PORT:-5434}:5432"  # for `ska index` and the benchmarks run from the host
     volumes:
       - db:/var/lib/postgresql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ska -d ska"]
       interval: 2s
       retries: 30
+
+  migrate:
+    <<: *app
+    command: ["alembic", "upgrade", "head"]
+    healthcheck: { disable: true }
+    depends_on:
+      db: { condition: service_healthy }
+
+  index:
+    <<: *app
+    command: ["ska", "index", "--sections", "corpus/sections.jsonl"]
+    healthcheck: { disable: true }
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+
+  api:
+    <<: *app
+    command: ["ska-api"]
+    ports: ["127.0.0.1:${API_PORT:-8080}:8080"]
+    depends_on:
+      index: { condition: service_completed_successfully }
+
+  jaeger:
+    image: jaegertracing/jaeger:2.11.0
+    ports: ["127.0.0.1:16686:16686"]  # UI; OTLP (4318) stays on the compose network
 
 volumes:
   db:

@@ -33,7 +33,9 @@ class Settings(BaseSettings):
 
     database_url: str = "postgresql+psycopg://ska:ska@127.0.0.1:5434/ska"
 
-    ollama_url: str = "http://localhost:11434"
+    # ollama: real embeddings. hash: word hashes for CI and smoke tests only (see embeddings.py).
+    embed_provider: Literal["ollama", "hash"] = "ollama"
+    ollama_url: str = "http://127.0.0.1:11434"
     embed_model: str = "nomic-embed-text"
     embed_dim: int = 768
 

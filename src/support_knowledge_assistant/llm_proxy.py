@@ -58,7 +58,7 @@ def main() -> None:  # pragma: no cover - process entry point
     settings = Settings()
     app = create_app(
         lambda model: ClaudeCliChat(model=model, binary=settings.claude_cli_path),
-        os.environ.get("LLM_PROXY_TOKEN", ""),
+        settings.llm_proxy_token.get_secret_value() if settings.llm_proxy_token else "",
         {settings.grade_model, settings.answer_model},
     )
     # 0.0.0.0 so containers can reach it through host.docker.internal; the token guards it.

@@ -8,9 +8,19 @@ from alembic import command
 from alembic.config import Config
 from sqlalchemy.engine import Engine
 
+from support_knowledge_assistant.config import Settings
 from support_knowledge_assistant.db import make_engine
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+@pytest.fixture(autouse=True)
+def _ignore_local_env(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Tests must not depend on the developer's .env (tokens, model mode, ports)."""
+    monkeypatch.setitem(Settings.model_config, "env_file", None)
+    for name in ("API_TOKENS", "LLM_MODE", "LLM_PROXY_TOKEN", "LLM_PROXY_URL", "DATABASE_URL",
+                 "EMBED_PROVIDER", "RETRIEVE_MODE", "RATE_LIMIT_PER_MINUTE"):
+        monkeypatch.delenv(name, raising=False)
 
 
 @pytest.fixture(scope="session")
