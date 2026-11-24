@@ -51,6 +51,15 @@ class Settings(BaseSettings):
     # vector measured best on the gold set (46/50 vs hybrid 44/50, keyword 41/50); see ADR 2.
     retrieve_mode: Literal["keyword", "vector", "hybrid"] = "vector"
     retrieve_k: int = Field(default=5, ge=1, le=20)
+
+    # pgvector: this repo's Postgres index (measured). azure-search / bedrock-kb: a managed index the
+    # client already runs, with the same fields (adapters.py, tested with mocks only).
+    retriever: Literal["pgvector", "azure-search", "bedrock-kb"] = "pgvector"
+    azure_search_endpoint: str | None = None
+    azure_search_index: str = "support-kb"
+    azure_search_key: SecretStr | None = None
+    bedrock_kb_id: str | None = None
+    aws_region: str = "eu-west-2"
     retrieve_candidates: int = Field(default=30, ge=5, le=200)
 
     # JSON object: {"<token>": {"name": "...", "role": "customer|support|sre"}}

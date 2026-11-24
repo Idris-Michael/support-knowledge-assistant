@@ -18,8 +18,16 @@ ROOT = Path(__file__).resolve().parents[1]
 def _ignore_local_env(monkeypatch: pytest.MonkeyPatch) -> None:
     """Tests must not depend on the developer's .env (tokens, model mode, ports)."""
     monkeypatch.setitem(Settings.model_config, "env_file", None)
-    for name in ("API_TOKENS", "LLM_MODE", "LLM_PROXY_TOKEN", "LLM_PROXY_URL", "DATABASE_URL",
-                 "EMBED_PROVIDER", "RETRIEVE_MODE", "RATE_LIMIT_PER_MINUTE"):
+    for name in (
+        "API_TOKENS",
+        "LLM_MODE",
+        "LLM_PROXY_TOKEN",
+        "LLM_PROXY_URL",
+        "DATABASE_URL",
+        "EMBED_PROVIDER",
+        "RETRIEVE_MODE",
+        "RATE_LIMIT_PER_MINUTE",
+    ):
         monkeypatch.delenv(name, raising=False)
 
 
