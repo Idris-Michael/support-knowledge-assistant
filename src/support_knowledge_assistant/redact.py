@@ -13,7 +13,9 @@ PHONE = re.compile(
     r"(?<![\w+])(?:\+44\s?|0)\d(?:[\s-]?\d){8,9}\b|(?<![\w+])\+(?!44)\d{1,3}(?:[\s-]?\d){6,12}\b"
 )
 CARD = re.compile(r"\b(?:\d[ -]?){12,18}\d\b")
-NI_NUMBER = re.compile(r"\b[A-CEGHJ-PR-TW-Z]{2}\s?\d{2}\s?\d{2}\s?\d{2}\s?[A-D]\b", re.IGNORECASE)
+# Any two letters, not only the prefixes HMRC issues: a redactor should over-match, and HMRC's own
+# example number (QQ 12 34 56 C) is exactly what people paste into tickets.
+NI_NUMBER = re.compile(r"\b[A-Z]{2}\s?\d{2}\s?\d{2}\s?\d{2}\s?[A-D]\b", re.IGNORECASE)
 
 
 @dataclass(frozen=True)
