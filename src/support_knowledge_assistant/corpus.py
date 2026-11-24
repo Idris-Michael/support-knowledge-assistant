@@ -24,7 +24,17 @@ from .redact import redact
 
 DOCS_VERSION = "18"
 DOCS_BASE = f"https://www.postgresql.org/docs/{DOCS_VERSION}/"
-SECTION_CLASSES = {"chapter", "appendix", "sect1", "sect2", "sect3", "sect4", "refentry", "refsect1", "refsect2"}
+SECTION_CLASSES = {
+    "chapter",
+    "appendix",
+    "sect1",
+    "sect2",
+    "sect3",
+    "sect4",
+    "refentry",
+    "refsect1",
+    "refsect2",
+}
 NUMBERING = re.compile(r"^(?:[A-Z]?\d+(?:\.\d+)*\.|[A-Z]\.\d+(?:\.\d+)*\.)\s*")
 PUBLIC = "public"
 
@@ -64,9 +74,18 @@ def fetch_pages(pages: list[str], raw_dir: Path, *, delay_s: float = 1.0) -> dic
                 target.write_bytes(res.content)
                 time.sleep(delay_s)
             entries.append(
-                {"page": page, "status": 200, "sha256": hashlib.sha256(target.read_bytes()).hexdigest()}
+                {
+                    "page": page,
+                    "status": 200,
+                    "sha256": hashlib.sha256(target.read_bytes()).hexdigest(),
+                }
             )
-    return {"version": DOCS_VERSION, "base": DOCS_BASE, "fetched": time.strftime("%Y-%m-%d"), "pages": entries}
+    return {
+        "version": DOCS_VERSION,
+        "base": DOCS_BASE,
+        "fetched": time.strftime("%Y-%m-%d"),
+        "pages": entries,
+    }
 
 
 # ---------------------------------------------------------------- parsing
@@ -78,7 +97,17 @@ def clean(text: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()
 
 
-BOXES = ["note", "tip", "warning", "caution", "important", "table", "example", "figure", "informaltable"]
+BOXES = [
+    "note",
+    "tip",
+    "warning",
+    "caution",
+    "important",
+    "table",
+    "example",
+    "figure",
+    "informaltable",
+]
 BLOCKS = ["p", "div", "dt", "dd", "li", "pre", "h1", "h2", "h3", "h4", "h5", "tr", "br"]
 
 
@@ -184,7 +213,7 @@ def parse_internal(path: Path) -> list[Section]:
     """An internal note: a `---` header with `title:` and `acl:` (comma separated), then `##` sections.
     Text is redacted here, so personal data in the source never reaches the index."""
     raw = path.read_text(encoding="utf-8").replace("\r\n", "\n")
-    match = re.match(r"---\n(.*?)\n---\n(.*)", raw, re.S)
+    match = re.match(r"---\n(.*?)\n---\n(.*)", raw, re.DOTALL)
     if not match:
         raise ValueError(f"{path.name}: missing --- header")
     meta = dict(ln.split(":", 1) for ln in match.group(1).splitlines() if ":" in ln)

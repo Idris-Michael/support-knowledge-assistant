@@ -46,3 +46,30 @@ dev = [
 
 [project.scripts]
 ska = "support_knowledge_assistant.cli:main"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S", "SIM", "RUF"]
+ignore = ["S101"]  # assert is how pytest checks
+allowed-confusables = ["›", "–"]  # heading separator and en dash are intentional
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S107"]  # test fixtures use literal secrets
+"bench/**" = ["T201"]
+
+[tool.mypy]
+strict = true
+packages = ["support_knowledge_assistant"]
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["langgraph.*", "pgvector.*", "boto3.*", "botocore.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=support_knowledge_assistant --cov-report=term-missing --cov-fail-under=80"
+markers = ["integration: needs Docker (testcontainers Postgres)"]

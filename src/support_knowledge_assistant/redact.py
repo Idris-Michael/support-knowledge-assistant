@@ -9,9 +9,11 @@ from dataclasses import dataclass
 
 EMAIL = re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b")
 # UK numbers (+44 / 0 prefix) and other international numbers written with a leading +.
-PHONE = re.compile(r"(?<![\w+])(?:\+44\s?|0)\d(?:[\s-]?\d){8,9}\b|(?<![\w+])\+(?!44)\d{1,3}(?:[\s-]?\d){6,12}\b")
+PHONE = re.compile(
+    r"(?<![\w+])(?:\+44\s?|0)\d(?:[\s-]?\d){8,9}\b|(?<![\w+])\+(?!44)\d{1,3}(?:[\s-]?\d){6,12}\b"
+)
 CARD = re.compile(r"\b(?:\d[ -]?){12,18}\d\b")
-NI_NUMBER = re.compile(r"\b[A-CEGHJ-PR-TW-Z]{2}\s?\d{2}\s?\d{2}\s?\d{2}\s?[A-D]\b", re.I)
+NI_NUMBER = re.compile(r"\b[A-CEGHJ-PR-TW-Z]{2}\s?\d{2}\s?\d{2}\s?\d{2}\s?[A-D]\b", re.IGNORECASE)
 
 
 @dataclass(frozen=True)

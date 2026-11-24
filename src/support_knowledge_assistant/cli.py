@@ -29,6 +29,49 @@ def _corpus_build(args: argparse.Namespace) -> int:
     return 0
 
 
+def _index(args: argparse.Namespace) -> int:
+    from .config import Settings
+    from .db import make_engine
+    from .embeddings import make_embeddings
+    from .indexer import index
+
+    settings = Settings()
+    sections = corpus.read_jsonl(Path(args.sections))
+    stats = index(
+        make_engine(settings.database_url),
+        make_embeddings(settings),
+        sections,
+        model=settings.embed_model,
+    )
+    print(
+        f"{stats.chunks} chunks from {len(sections)} sections: {stats.embedded} embedded, "
+        f"{stats.reused} reused, {stats.removed} removed"
+    )
+    return 0
+
+
+def _search(args: argparse.Namespace) -> int:
+    from .config import ROLE_GROUPS, Settings
+    from .db import make_engine
+    from .embeddings import make_embeddings
+    from .retrieve import search
+
+    settings = Settings()
+    hits = search(
+        make_engine(settings.database_url),
+        make_embeddings(settings) if args.mode != "keyword" else None,
+        args.question,
+        ROLE_GROUPS[args.role],
+        mode=args.mode,
+        k=args.k,
+        candidates=settings.retrieve_candidates,
+    )
+    for i, h in enumerate(hits, 1):
+        ranks = f"kw={h.keyword_rank or '-'} vec={h.vector_rank or '-'}"
+        print(f"{i}. {h.section_id}  [{ranks}]  {h.heading}")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="ska", description="Support knowledge assistant")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -46,6 +89,17 @@ def build_parser() -> argparse.ArgumentParser:
     b.add_argument("--internal", default="corpus/internal")
     b.add_argument("--out", default="corpus/sections.jsonl")
     b.set_defaults(fn=_corpus_build)
+
+    i = sub.add_parser("index", help="chunk, embed and store the sections")
+    i.add_argument("--sections", default="corpus/sections.jsonl")
+    i.set_defaults(fn=_index)
+
+    s = sub.add_parser("search", help="show what retrieval returns for a question")
+    s.add_argument("question")
+    s.add_argument("--role", choices=["customer", "support", "sre"], default="customer")
+    s.add_argument("--mode", choices=["keyword", "vector", "hybrid"], default="hybrid")
+    s.add_argument("-k", type=int, default=5)
+    s.set_defaults(fn=_search)
     return p
 
 
