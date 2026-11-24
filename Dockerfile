@@ -1,5 +1,5 @@
 # One image for the API, the indexer and migrations; the command picks the role.
-FROM python:3.12-slim AS build
+FROM python:3.15-slim AS build
 COPY --from=ghcr.io/astral-sh/uv:0.11.24 /uv /bin/uv
 WORKDIR /app
 ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy UV_PYTHON_DOWNLOADS=never
@@ -8,7 +8,7 @@ RUN uv sync --locked --no-dev --no-install-project
 COPY src ./src
 RUN uv sync --locked --no-dev --no-editable
 
-FROM python:3.12-slim
+FROM python:3.15-slim
 ENV PATH=/app/.venv/bin:$PATH PYTHONUNBUFFERED=1
 COPY --from=build /app/.venv /app/.venv
 RUN useradd --uid 10001 --create-home app
