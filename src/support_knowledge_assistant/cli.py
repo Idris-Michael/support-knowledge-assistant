@@ -72,6 +72,19 @@ def _search(args: argparse.Namespace) -> int:
     return 0
 
 
+def _ask(args: argparse.Namespace) -> int:
+    from .config import Principal, Settings
+    from .service import build_assistant
+
+    result = build_assistant(Settings()).ask(args.question, Principal(name="cli", role=args.role))
+    print(result.answer)
+    for c in result.citations:
+        print(f"  [{c.n}] {c.heading}  {c.url}")
+    reason = f" ({result.reason})" if result.reason else ""
+    print(f"-- {result.outcome}{reason}, {result.latency_ms} ms, graded relevant: {result.relevant}")
+    return 0 if result.outcome != "error" else 1
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="ska", description="Support knowledge assistant")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -100,6 +113,11 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--mode", choices=["keyword", "vector", "hybrid"], default="hybrid")
     s.add_argument("-k", type=int, default=5)
     s.set_defaults(fn=_search)
+
+    a = sub.add_parser("ask", help="answer a question with citations, or refuse")
+    a.add_argument("question")
+    a.add_argument("--role", choices=["customer", "support", "sre"], default="customer")
+    a.set_defaults(fn=_ask)
     return p
 
 
