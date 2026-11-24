@@ -1,0 +1,102 @@
+{
+  "measured": "2026-11-24",
+  "corpus": {
+    "docs": "PostgreSQL 18, 116 pages",
+    "sections": 785,
+    "internal_sections": 30,
+    "chunks": 1320
+  },
+  "questions": {
+    "total": 64,
+    "answerable": 50,
+    "unanswerable": 8,
+    "restricted": 6,
+    "fixed_before_code": "commit ba3947e"
+  },
+  "retrieval": {
+    "embed_model": "nomic-embed-text",
+    "modes": {
+      "keyword": {
+        "hit_at_5": 0.82,
+        "hits": "41/50",
+        "mrr_at_10": 0.639,
+        "by_category": {
+          "identifier": "18/20",
+          "internal": "6/6",
+          "paraphrase": "17/24"
+        },
+        "median_ms": 10.9
+      },
+      "vector": {
+        "hit_at_5": 0.92,
+        "hits": "46/50",
+        "mrr_at_10": 0.805,
+        "by_category": {
+          "identifier": "19/20",
+          "internal": "6/6",
+          "paraphrase": "21/24"
+        },
+        "median_ms": 32.7
+      },
+      "hybrid": {
+        "hit_at_5": 0.88,
+        "hits": "44/50",
+        "mrr_at_10": 0.762,
+        "by_category": {
+          "identifier": "19/20",
+          "internal": "6/6",
+          "paraphrase": "19/24"
+        },
+        "median_ms": 20.6
+      }
+    },
+    "leak_check": {
+      "searches": 576,
+      "leaks": 0
+    }
+  },
+  "answers": {
+    "measured": "2026-11-24",
+    "llm_mode": "claude-cli",
+    "grade_model": "claude-haiku-5-5",
+    "answer_model": "claude-sonnet-5-5",
+    "retrieve_mode": "vector",
+    "answerable": {
+      "questions": 50,
+      "answered": 46,
+      "cites_gold": 43,
+      "refused": 4,
+      "errors": 0
+    },
+    "should_refuse": {
+      "questions": 14,
+      "refused": 13,
+      "by_category": {
+        "restricted": "5/6",
+        "unanswerable": "8/8"
+      }
+    },
+    "leaks": 0,
+    "retries": 0,
+    "seconds_median": 8.4,
+    "seconds_p90": 10.9,
+    "tokens_in": 302509,
+    "tokens_out": 20097
+  },
+  "hand_check": {
+    "checked_by": "Claude (same model family as the answer model; see spot_check.md for the human sample)",
+    "answered_checked": 47,
+    "correct_and_complete": 40,
+    "correct_but_incomplete": 7,
+    "wrong_statements": 0,
+    "incomplete": {
+      "Q08": "pg_restore page not retrieved; says so",
+      "Q22": "explains PITR, no restore commands in the retrieved sections; says so",
+      "Q25": "covers pg_upgrade, says the replication route is not described",
+      "Q28": "gives the catalogue method, says the size functions are not named",
+      "Q36": "points to pg_hba.conf and CIDR ranges but not the reject method; says so",
+      "Q38": "covers insert_exists only; says other conflicts are not covered",
+      "Q42": "explains asynchronous commit but says it cannot confirm 'no corruption' (that sentence is in a second chunk of the section; one chunk per section is kept)"
+    }
+  }
+}

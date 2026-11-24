@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "Q01",
+    "mode": "keyword",
+    "rank": null,
+    "top5": [
+      "runtime-config-logging#GUC-LOG-MIN-MESSAGES",
+      "runtime-config-logging#GUC-LOG-MIN-ERROR-STATEMENT",
+      "runtime-config-resource#GUC-MAX-FILES-PER-PROCESS",
+      "runtime-config-wal#RUNTIME-CONFIG-WAL-SUMMARIZATION",
+      "kernel-resources#KERNEL-RESOURCES-LIMITS"
+    ]
+  },
+  {
+    "id": "Q02",
+    "mode": "keyword",
+    "rank": 2,
+    "top5": [
+      "runtime-config-client#GUC-IDLE-SESSION-TIMEOUT",
+      "runtime-config-client#GUC-IDLE-IN-TRANSACTION-SESSION-TIMEOUT",
+      "runtime-config-client#GUC-TRANSACTION-TIMEOUT",
+      "errcodes-appendix#ERRCODES-APPENDIX",
+      "monitoring-stats#MONITORING-PG-STAT-DATABASE-VIEW"
+    ]
+  },
+  {
+    "id": "Q03",
+    "mode": "keyword",
+    "rank": 5,
+    "top5": [
+      "app-pgdump#PG-DUMP-OPTIONS",
+      "app-pg-dumpall#id-1.9.4.15.6",
+      "app-pgbasebackup#id-1.9.4.10.6",
+      "app-pgrestore#APP-PGRESTORE-OPTIONS",
+      "errcodes-appendix#ERRCODES-APPENDIX"
+    ]
+  },
+  {
+    "id": "Q04",
+    "mode": "keyword",
+    "rank": 2,
+    "top5": [
+      "wal-configuration#WAL-CONFIGURATION",
+      "runtime-config-wal#GUC-MAX-WAL-SIZE",
+      "runtime-config-replication#GUC-MAX-SLOT-WAL-KEEP-SIZE",
+      "warm-standby#STREAMING-REPLICATION-SLOTS",
+      "app-pgbasebackup#id-1.9.4.10.6"
+    ]
+  },
+  {
+    "id": "Q05",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "runtime-config-wal#GUC-WAL-LEVEL",
+      "logical-replication-config#LOGICAL-REPLICATION-CONFIG-PUBLISHER",
+      "sql-altersystem#id-1.9.3.34.8",
+      "hot-standby#HOT-STANDBY-ADMIN",
+      "logical-replication-config#LOGICAL-REPLICATION-CONFIG-SUBSCRIBER"
+    ]
+  },
+  {
+    "id": "Q06",
+    "mode": "keyword",
+    "rank": 2,
+    "top5": [
+      "monitoring-stats#MONITORING-PG-STAT-DATABASE-VIEW",
+      "monitoring-stats#MONITORING-PG-STAT-ACTIVITY-VIEW",
+      "monitoring-stats#MONITORING-STATS-VIEWS",
+      "monitoring-ps#MONITORING-PS",
+      "hot-standby#HOT-STANDBY-ADMIN"
+    ]
+  },
+  {
+    "id": "Q07",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "app-pgdump#PG-DUMP-OPTIONS",
+      "app-pgdump#PG-DUMP-DESCRIPTION",
+      "backup-dump#BACKUP-DUMP-LARGE",
+      "app-pgrestore#APP-PGRESTORE-OPTIONS",
+      "backup-dump#BACKUP-DUMP"
+    ]
+  },
+  {
+    "id": "Q08",
+    "mode": "keyword",
+    "rank": 4,
+    "top5": [
+      "backup-dump#BACKUP-DUMP-LARGE",
+      "app-pgdump#PG-DUMP-OPTIONS",
+      "app-pgdump#PG-DUMP-DESCRIPTION",
+      "app-pgrestore#APP-PGRESTORE-OPTIONS",
+      "app-pgdump#PG-DUMP-EXAMPLES"
+    ]
+  },
+  {
+    "id": "Q09",
+    "mode": "keyword",
+    "rank": 2,
+    "top5": [
+      "runtime-config-connection#GUC-PASSWORD-ENCRYPTION",
+      "auth-password#AUTH-PASSWORD",
+      "auth-pg-hba-conf#AUTH-PG-HBA-CONF",
+      "runtime-config-connection#GUC-SCRAM-ITERATIONS",
+      "preventing-server-spoofing#PREVENTING-SERVER-SPOOFING"
+    ]
+  },
+  {
+    "id": "Q10",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "runtime-config-replication#GUC-HOT-STANDBY-FEEDBACK",
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "runtime-config-preset#GUC-IN-HOT-STANDBY",
+      "runtime-config-replication#GUC-HOT-STANDBY",
+      "hot-standby#HOT-STANDBY-PARAMETERS"
+    ]
+  },
+  {
+    "id": "Q11",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "runtime-config-replication#GUC-MAX-SLOT-WAL-KEEP-SIZE",
+      "warm-standby#STREAMING-REPLICATION-SLOTS",
+      "wal-configuration#WAL-CONFIGURATION",
+      "runtime-config-wal#GUC-MAX-WAL-SIZE",
+      "logical-replication-config#LOGICAL-REPLICATION-CONFIG-PUBLISHER"
+    ]
+  },
+  {
+    "id": "Q12",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "sql-vacuum#id-1.9.3.184.5",
+      "routine-vacuuming#VACUUM-FOR-SPACE-RECOVERY",
+      "sql-vacuum#id-1.9.3.184.6",
+      "sql-vacuum#SQL-VACUUM",
+      "routine-vacuuming#VACUUM-BASICS"
+    ]
+  },
+  {
+    "id": "Q13",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "predefined-roles#PREDEFINED-ROLE-PG-READ-ALL-DATA",
+      "predefined-roles#PREDEFINED-ROLE-PG-CHECKPOINT",
+      "predefined-roles#PREDEFINED-ROLE-PG-MONITOR",
+      "predefined-roles#PREDEFINED-ROLE-PG-READ-SERVER-FILES",
+      "predefined-roles#PREDEFINED-ROLE-PG-CREATE-SUBSCRIPTION"
+    ]
+  },
+  {
+    "id": "Q14",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "runtime-config-client#GUC-STATEMENT-TIMEOUT",
+      "runtime-config-client#GUC-TRANSACTION-TIMEOUT",
+      "runtime-config-client#GUC-LOCK-TIMEOUT",
+      "runtime-config-client#GUC-IDLE-SESSION-TIMEOUT",
+      "runtime-config-logging#GUC-LOG-TRANSACTION-SAMPLE-RATE"
+    ]
+  },
+  {
+    "id": "Q15",
+    "mode": "keyword",
+    "rank": 2,
+    "top5": [
+      "ssl-tcp#SSL-CLIENT-CERTIFICATES",
+      "auth-pg-hba-conf#AUTH-PG-HBA-CONF",
+      "auth-username-maps#AUTH-USERNAME-MAPS",
+      "gssapi-auth#GSSAPI-AUTH",
+      "auth-trust#AUTH-TRUST"
+    ]
+  },
+  {
+    "id": "Q16",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "sql-altersystem#id-1.9.3.34.5",
+      "config-setting#CONFIG-SETTING-CONFIGURATION-FILE",
+      "sql-altersystem#SQL-ALTERSYSTEM",
+      "wal-intro#WAL-INTRO",
+      "sql-altersystem#id-1.9.3.34.9"
+    ]
+  },
+  {
+    "id": "Q17",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "runtime-config-vacuum#GUC-AUTOVACUUM-VACUUM-SCALE-FACTOR",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-VACUUM-INSERT-SCALE-FACTOR",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-ANALYZE-SCALE-FACTOR",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-VACUUM-MAX-THRESHOLD",
+      "routine-vacuuming#AUTOVACUUM"
+    ]
+  },
+  {
+    "id": "Q18",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "sql-reindex#SQL-REINDEX-CONCURRENTLY",
+      "sql-reindex#id-1.9.3.163.8",
+      "sql-reindex#id-1.9.3.163.6",
+      "progress-reporting#CREATE-INDEX-PROGRESS-REPORTING",
+      "sql-reindex#SQL-REINDEX"
+    ]
+  },
+  {
+    "id": "Q19",
+    "mode": "keyword",
+    "rank": 2,
+    "top5": [
+      "progress-reporting#BASEBACKUP-PROGRESS-REPORTING",
+      "app-pgbasebackup#id-1.9.4.10.6",
+      "app-pgbasebackup#id-1.9.4.10.8",
+      "app-pgbasebackup#id-1.9.4.10.5",
+      "app-pgbasebackup#APP-PGBASEBACKUP"
+    ]
+  },
+  {
+    "id": "Q20",
+    "mode": "keyword",
+    "rank": 8,
+    "top5": [
+      "warm-standby#STREAMING-REPLICATION",
+      "runtime-config-logging#GUC-LOG-CHECKPOINTS",
+      "hot-standby#HOT-STANDBY-ADMIN",
+      "runtime-config-wal#GUC-WAL-LOG-HINTS",
+      "warm-standby#STANDBY-PLANNING"
+    ]
+  },
+  {
+    "id": "Q21",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "routine-vacuuming#VACUUM-FOR-SPACE-RECOVERY",
+      "routine-vacuuming#VACUUM-BASICS",
+      "sql-vacuum#id-1.9.3.184.8",
+      "routine-vacuuming#VACUUM-FOR-WRAPAROUND",
+      "logical-replication-row-filter#LOGICAL-REPLICATION-ROW-FILTER-TRANSFORMATIONS"
+    ]
+  },
+  {
+    "id": "Q22",
+    "mode": "keyword",
+    "rank": 3,
+    "top5": [
+      "app-pgbasebackup#id-1.9.4.10.5",
+      "backup-file#BACKUP-FILE",
+      "continuous-archiving#BACKUP-PITR-RECOVERY",
+      "continuous-archiving#BACKUP-TIMELINES",
+      "continuous-archiving#CONTINUOUS-ARCHIVING"
+    ]
+  },
+  {
+    "id": "Q23",
+    "mode": "keyword",
+    "rank": 4,
+    "top5": [
+      "runtime-config-client#GUC-IDLE-IN-TRANSACTION-SESSION-TIMEOUT",
+      "runtime-config-logging#GUC-LOG-LOCK-WAITS",
+      "monitoring-ps#MONITORING-PS",
+      "monitoring-stats#MONITORING-PG-STAT-ACTIVITY-VIEW",
+      "hot-standby#HOT-STANDBY-CONFLICT"
+    ]
+  },
+  {
+    "id": "Q24",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "runtime-config-client#GUC-IDLE-IN-TRANSACTION-SESSION-TIMEOUT",
+      "runtime-config-client#GUC-IDLE-SESSION-TIMEOUT",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-FREEZE-MAX-AGE",
+      "routine-vacuuming#VACUUM-FOR-MULTIXACT-WRAPAROUND",
+      "monitoring-stats#MONITORING-PG-STAT-ACTIVITY-VIEW"
+    ]
+  },
+  {
+    "id": "Q25",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "upgrading#UPGRADING",
+      "pgupgrade#id-1.9.5.13.7",
+      "upgrading#UPGRADING-VIA-REPLICATION",
+      "upgrading#UPGRADING-VIA-PGDUMPALL",
+      "runtime-config-compatible#GUC-TRANSFORM-NULL-EQUALS"
+    ]
+  },
+  {
+    "id": "Q26",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "runtime-config-logging#GUC-LOG-RECOVERY-CONFLICT-WAITS",
+      "hot-standby#HOT-STANDBY-ADMIN",
+      "runtime-config-replication#GUC-MAX-STANDBY-ARCHIVE-DELAY",
+      "continuous-archiving#BACKUP-ARCHIVING-WAL"
+    ]
+  },
+  {
+    "id": "Q27",
+    "mode": "keyword",
+    "rank": null,
+    "top5": [
+      "pgupgrade#id-1.9.5.13.9",
+      "warm-standby#WARM-STANDBY",
+      "continuous-archiving#BACKUP-PITR-RECOVERY",
+      "warm-standby#PREPARING-PRIMARY-FOR-STANDBY",
+      "continuous-archiving#BACKUP-ARCHIVING-WAL"
+    ]
+  },
+  {
+    "id": "Q28",
+    "mode": "keyword",
+    "rank": 3,
+    "top5": [
+      "routine-vacuuming#VACUUM-FOR-SPACE-RECOVERY",
+      "sql-vacuum#id-1.9.3.184.5",
+      "diskusage#DISK-USAGE",
+      "sql-vacuum#id-1.9.3.184.6",
+      "sql-reindex#id-1.9.3.163.7"
+    ]
+  },
+  {
+    "id": "Q29",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "backup-file#BACKUP-FILE",
+      "progress-reporting#COPY-PROGRESS-REPORTING",
+      "pgupgrade#id-1.9.5.13.9",
+      "logical-replication-restrictions#LOGICAL-REPLICATION-RESTRICTIONS",
+      "continuous-archiving#BACKUP-PITR-RECOVERY"
+    ]
+  },
+  {
+    "id": "Q30",
+    "mode": "keyword",
+    "rank": 5,
+    "top5": [
+      "preventing-server-spoofing#PREVENTING-SERVER-SPOOFING",
+      "ssh-tunnels#SSH-TUNNELS",
+      "app-pgdump#PG-DUMP-OPTIONS",
+      "manage-ag-config#MANAGE-AG-CONFIG",
+      "auth-pg-hba-conf#AUTH-PG-HBA-CONF"
+    ]
+  },
+  {
+    "id": "Q31",
+    "mode": "keyword",
+    "rank": null,
+    "top5": [
+      "backup-dump#BACKUP-DUMP-RESTORE",
+      "server-start#SERVER-START",
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "diskusage#DISK-FULL",
+      "backup-file#BACKUP-FILE"
+    ]
+  },
+  {
+    "id": "Q32",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "routine-vacuuming#VACUUM-FOR-WRAPAROUND",
+      "backup-file#BACKUP-FILE",
+      "warm-standby#SYNCHRONOUS-REPLICATION-HA",
+      "sql-vacuum#id-1.9.3.184.6",
+      "routine-vacuuming#AUTOVACUUM"
+    ]
+  },
+  {
+    "id": "Q33",
+    "mode": "keyword",
+    "rank": null,
+    "top5": [
+      "logical-replication#LOGICAL-REPLICATION",
+      "sql-grant#SQL-GRANT-NOTES",
+      "sql-analyze#id-1.9.3.46.5",
+      "sql-reindex#id-1.9.3.163.7",
+      "different-replication-solutions#DIFFERENT-REPLICATION-SOLUTIONS"
+    ]
+  },
+  {
+    "id": "Q34",
+    "mode": "keyword",
+    "rank": 3,
+    "top5": [
+      "runtime-config-wal#GUC-WAL-LEVEL",
+      "monitoring-stats#MONITORING-STATS-VIEWS",
+      "sql-analyze#id-1.9.3.46.8",
+      "routine-vacuuming#VACUUM-FOR-STATISTICS",
+      "runtime-config-query#GUC-FROM-COLLAPSE-LIMIT"
+    ]
+  },
+  {
+    "id": "Q35",
+    "mode": "keyword",
+    "rank": null,
+    "top5": [
+      "warm-standby#WARM-STANDBY",
+      "runtime-config-logging#GUC-LOG-STARTUP-PROGRESS-INTERVAL",
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "app-pgbasebackup#id-1.9.4.10.6",
+      "runtime-config-wal#GUC-ARCHIVE-CLEANUP-COMMAND"
+    ]
+  },
+  {
+    "id": "Q36",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "auth-pg-hba-conf#AUTH-PG-HBA-CONF",
+      "app-pgbasebackup#id-1.9.4.10.5",
+      "logical-replication-security#LOGICAL-REPLICATION-SECURITY",
+      "app-pg-dumpall#APP-PG-DUMPALL-DESCRIPTION",
+      "kernel-resources#LINUX-MEMORY-OVERCOMMIT"
+    ]
+  },
+  {
+    "id": "Q37",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "role-removal#ROLE-REMOVAL",
+      "logical-replication-col-lists#LOGICAL-REPLICATION-COL-LISTS",
+      "hot-standby#HOT-STANDBY-ADMIN",
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "routine-vacuuming#VACUUM-FOR-MULTIXACT-WRAPAROUND"
+    ]
+  },
+  {
+    "id": "Q38",
+    "mode": "keyword",
+    "rank": 4,
+    "top5": [
+      "logical-replication-row-filter#LOGICAL-REPLICATION-ROW-FILTER-INITIAL-DATA-SYNC",
+      "logical-replication-architecture#LOGICAL-REPLICATION-SNAPSHOT",
+      "logical-replication-gencols#LOGICAL-REPLICATION-GENCOLS",
+      "logical-replication-conflicts#CONFLICT-INSERT-EXISTS",
+      "logical-replication-conflicts#CONFLICT-UPDATE-EXISTS"
+    ]
+  },
+  {
+    "id": "Q39",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "server-shutdown#SERVER-SHUTDOWN",
+      "auth-ident#AUTH-IDENT",
+      "hot-standby#HOT-STANDBY-USERS",
+      "auth-ldap#AUTH-LDAP",
+      "ssh-tunnels#SSH-TUNNELS"
+    ]
+  },
+  {
+    "id": "Q40",
+    "mode": "keyword",
+    "rank": null,
+    "top5": [
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "warm-standby-failover#WARM-STANDBY-FAILOVER",
+      "runtime-config-replication#RUNTIME-CONFIG-REPLICATION-STANDBY",
+      "runtime-config-replication#GUC-PRIMARY-CONNINFO",
+      "hot-standby#HOT-STANDBY-ADMIN"
+    ]
+  },
+  {
+    "id": "Q41",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "collation#ICU-CUSTOM-COLLATIONS",
+      "locale#LOCALE-OVERVIEW",
+      "collation#ICU-TAILORING-RULES",
+      "manage-ag-createdb#MANAGE-AG-CREATEDB",
+      "config-setting#CONFIG-INCLUDES"
+    ]
+  },
+  {
+    "id": "Q42",
+    "mode": "keyword",
+    "rank": 2,
+    "top5": [
+      "warm-standby#SYNCHRONOUS-REPLICATION-CONFIG",
+      "wal-async-commit#WAL-ASYNC-COMMIT",
+      "high-availability#HIGH-AVAILABILITY",
+      "runtime-config-wal#GUC-SYNCHRONOUS-COMMIT",
+      "runtime-config-wal#GUC-WAL-SKIP-THRESHOLD"
+    ]
+  },
+  {
+    "id": "Q43",
+    "mode": "keyword",
+    "rank": null,
+    "top5": [
+      "routine-vacuuming#VACUUM-FOR-STATISTICS",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-NAPTIME",
+      "runtime-config-vacuum#GUC-AUTOVACUUM",
+      "continuous-archiving#BACKUP-PITR-RECOVERY",
+      "routine-vacuuming#ROUTINE-VACUUMING"
+    ]
+  },
+  {
+    "id": "Q44",
+    "mode": "keyword",
+    "rank": 6,
+    "top5": [
+      "continuous-archiving#BACKUP-LOWLEVEL-BASE-BACKUP-DATA",
+      "pgupgrade#id-1.9.5.13.9",
+      "warm-standby#STANDBY-SERVER-SETUP",
+      "backup-file#BACKUP-FILE",
+      "app-pgbasebackup#id-1.9.4.10.5"
+    ]
+  },
+  {
+    "id": "Q45",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "internal/support-plan-limits#plan-limits",
+      "internal/support-plan-limits#overview",
+      "internal/support-plan-limits#answering-too-many-clients-already-tickets",
+      "sql-createrole#id-1.9.3.78.6",
+      "runtime-config-client#GUC-GIN-FUZZY-SEARCH-LIMIT"
+    ]
+  },
+  {
+    "id": "Q46",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "internal/support-restore-requests#what-we-can-restore",
+      "continuous-archiving#BACKUP-LOWLEVEL-BASE-BACKUP-DATA",
+      "continuous-archiving#BACKUP-PITR-RECOVERY",
+      "warm-standby#STANDBY-SERVER-SETUP",
+      "pgupgrade#id-1.9.5.13.7"
+    ]
+  },
+  {
+    "id": "Q47",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "internal/support-extensions#not-allowed",
+      "internal/support-restore-requests#what-we-can-restore",
+      "locale#ICU-LANGUAGE-TAG",
+      "collation#ICU-TAILORING-RULES",
+      "app-pgbasebackup#id-1.9.4.10.6"
+    ]
+  },
+  {
+    "id": "Q48",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "internal/support-plan-limits#answering-too-many-clients-already-tickets",
+      "auth-ldap#AUTH-LDAP",
+      "runtime-config-connection#GUC-PORT",
+      "pgupgrade#id-1.9.5.13.7",
+      "ssl-tcp#SSL-SETUP"
+    ]
+  },
+  {
+    "id": "Q49",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "internal/support-escalation#how-to-page-the-on-call-sre",
+      "internal/support-escalation#severity-levels",
+      "runtime-config-resource#GUC-HUGE-PAGES",
+      "internal/support-restore-requests#example-ticket-for-training",
+      "runtime-config-wal#GUC-WAL-LOG-HINTS"
+    ]
+  },
+  {
+    "id": "Q50",
+    "mode": "keyword",
+    "rank": 1,
+    "top5": [
+      "internal/support-restore-requests#information-to-collect",
+      "monitoring-stats#MONITORING-PG-STAT-CHECKPOINTER-VIEW",
+      "internal/support-restore-requests#overview",
+      "internal/support-restore-requests#example-ticket-for-training",
+      "continuous-archiving#BACKUP-PITR-RECOVERY"
+    ]
+  },
+  {
+    "id": "Q01",
+    "mode": "vector",
+    "rank": null,
+    "top5": [
+      "kernel-resources#KERNEL-RESOURCES-LIMITS",
+      "runtime-config-replication#GUC-MAX-WAL-SENDERS",
+      "hot-standby#HOT-STANDBY-ADMIN",
+      "runtime-config-logging#GUC-LOG-MIN-MESSAGES",
+      "runtime-config-logging#GUC-LOG-PARAMETER-MAX-LENGTH-ON-ERROR"
+    ]
+  },
+  {
+    "id": "Q02",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "runtime-config-client#GUC-IDLE-IN-TRANSACTION-SESSION-TIMEOUT",
+      "runtime-config-client#GUC-IDLE-SESSION-TIMEOUT",
+      "runtime-config-client#GUC-TRANSACTION-TIMEOUT",
+      "runtime-config-replication#GUC-IDLE-REPLICATION-SLOT-TIMEOUT",
+      "runtime-config-connection#GUC-TCP-USER-TIMEOUT"
+    ]
+  },
+  {
+    "id": "Q03",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "errcodes-appendix#ERRCODES-APPENDIX",
+      "server-start#SERVER-START-FAILURES",
+      "runtime-config-logging#GUC-LOG-LINE-PREFIX",
+      "runtime-config-error-handling#GUC-DATA-SYNC-RETRY",
+      "logical-replication-failover#LOGICAL-REPLICATION-FAILOVER"
+    ]
+  },
+  {
+    "id": "Q04",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "runtime-config-wal#GUC-MAX-WAL-SIZE",
+      "wal-configuration#WAL-CONFIGURATION",
+      "runtime-config-replication#GUC-MAX-SLOT-WAL-KEEP-SIZE",
+      "runtime-config-wal#GUC-MIN-WAL-SIZE",
+      "runtime-config-replication#GUC-WAL-KEEP-SIZE"
+    ]
+  },
+  {
+    "id": "Q05",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "runtime-config-wal#GUC-WAL-LEVEL",
+      "logical-replication-config#LOGICAL-REPLICATION-CONFIG-PUBLISHER",
+      "sql-altersystem#id-1.9.3.34.8",
+      "logical-replication-architecture#LOGICAL-REPLICATION-ARCHITECTURE",
+      "runtime-config-replication#RUNTIME-CONFIG-REPLICATION-PRIMARY"
+    ]
+  },
+  {
+    "id": "Q06",
+    "mode": "vector",
+    "rank": 2,
+    "top5": [
+      "runtime-config-client#GUC-IDLE-IN-TRANSACTION-SESSION-TIMEOUT",
+      "monitoring-stats#MONITORING-PG-STAT-ACTIVITY-VIEW",
+      "monitoring-stats#MONITORING-PG-STAT-DATABASE-VIEW",
+      "monitoring-ps#MONITORING-PS",
+      "runtime-config-client#GUC-IDLE-SESSION-TIMEOUT"
+    ]
+  },
+  {
+    "id": "Q07",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "app-pgdump#PG-DUMP-OPTIONS",
+      "app-pgdump#PG-DUMP-DESCRIPTION",
+      "backup-dump#BACKUP-DUMP-LARGE",
+      "app-pg-dumpall#APP-PG-DUMPALL-DESCRIPTION",
+      "backup-dump#BACKUP-DUMP-ALL"
+    ]
+  },
+  {
+    "id": "Q08",
+    "mode": "vector",
+    "rank": 3,
+    "top5": [
+      "app-pgrestore#APP-PGRESTORE-DESCRIPTION",
+      "app-pgdump#PG-DUMP-DESCRIPTION",
+      "app-pgrestore#APP-PGRESTORE-OPTIONS",
+      "app-pgrestore#APP-PGRESTORE",
+      "app-pgdump#PG-DUMP-OPTIONS"
+    ]
+  },
+  {
+    "id": "Q09",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "auth-password#AUTH-PASSWORD",
+      "auth-pg-hba-conf#AUTH-PG-HBA-CONF",
+      "runtime-config-connection#GUC-PASSWORD-ENCRYPTION",
+      "runtime-config-connection#GUC-SCRAM-ITERATIONS",
+      "preventing-server-spoofing#PREVENTING-SERVER-SPOOFING"
+    ]
+  },
+  {
+    "id": "Q10",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "runtime-config-replication#GUC-HOT-STANDBY-FEEDBACK",
+      "hot-standby#HOT-STANDBY-CAVEATS",
+      "hot-standby#HOT-STANDBY-ADMIN",
+      "hot-standby#HOT-STANDBY-USERS",
+      "hot-standby#HOT-STANDBY-CONFLICT"
+    ]
+  },
+  {
+    "id": "Q11",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "runtime-config-replication#GUC-MAX-SLOT-WAL-KEEP-SIZE",
+      "runtime-config-replication#GUC-MAX-REPLICATION-SLOTS",
+      "warm-standby#STREAMING-REPLICATION-SLOTS",
+      "logical-replication-config#LOGICAL-REPLICATION-CONFIG-PUBLISHER",
+      "runtime-config-replication#GUC-WAL-KEEP-SIZE"
+    ]
+  },
+  {
+    "id": "Q12",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "sql-vacuum#id-1.9.3.184.5",
+      "sql-vacuum#id-1.9.3.184.6",
+      "routine-vacuuming#VACUUM-BASICS",
+      "routine-vacuuming#VACUUM-FOR-SPACE-RECOVERY",
+      "runtime-config-vacuum#GUC-VACUUM-TRUNCATE"
+    ]
+  },
+  {
+    "id": "Q13",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "predefined-roles#PREDEFINED-ROLE-PG-READ-ALL-DATA",
+      "predefined-roles#PREDEFINED-ROLE-PG-MONITOR",
+      "predefined-roles#PREDEFINED-ROLE-PG-READ-SERVER-FILES",
+      "app-pgdump#PG-DUMP-OPTIONS",
+      "app-pg-dumpall#id-1.9.4.15.6"
+    ]
+  },
+  {
+    "id": "Q14",
+    "mode": "vector",
+    "rank": 2,
+    "top5": [
+      "runtime-config-client#GUC-TRANSACTION-TIMEOUT",
+      "runtime-config-client#GUC-STATEMENT-TIMEOUT",
+      "runtime-config-client#GUC-LOCK-TIMEOUT",
+      "runtime-config-client#GUC-IDLE-IN-TRANSACTION-SESSION-TIMEOUT",
+      "runtime-config-replication#GUC-WAL-RECEIVER-TIMEOUT"
+    ]
+  },
+  {
+    "id": "Q15",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "auth-pg-hba-conf#AUTH-PG-HBA-CONF",
+      "auth-username-maps#AUTH-USERNAME-MAPS",
+      "gssapi-auth#GSSAPI-AUTH",
+      "warm-standby#STREAMING-REPLICATION-AUTHENTICATION",
+      "encryption-options#ENCRYPTION-OPTIONS"
+    ]
+  },
+  {
+    "id": "Q16",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "sql-altersystem#id-1.9.3.34.5",
+      "sql-altersystem#id-1.9.3.34.9",
+      "sql-altersystem#id-1.9.3.34.7",
+      "config-setting#CONFIG-SETTING-CONFIGURATION-FILE",
+      "runtime-config-compatible#GUC-ALLOW-ALTER-SYSTEM"
+    ]
+  },
+  {
+    "id": "Q17",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "runtime-config-vacuum#GUC-AUTOVACUUM-VACUUM-SCALE-FACTOR",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-VACUUM-INSERT-SCALE-FACTOR",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-ANALYZE-SCALE-FACTOR",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-VACUUM-MAX-THRESHOLD",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-VACUUM-COST-LIMIT"
+    ]
+  },
+  {
+    "id": "Q18",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "sql-reindex#SQL-REINDEX-CONCURRENTLY",
+      "sql-reindex#id-1.9.3.163.6",
+      "sql-reindex#id-1.9.3.163.7",
+      "progress-reporting#CREATE-INDEX-PROGRESS-REPORTING",
+      "sql-reindex#id-1.9.3.163.5"
+    ]
+  },
+  {
+    "id": "Q19",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "app-pgbasebackup#id-1.9.4.10.6",
+      "app-pgbasebackup#id-1.9.4.10.8",
+      "app-pgbasebackup#id-1.9.4.10.5",
+      "progress-reporting#BASEBACKUP-PROGRESS-REPORTING",
+      "continuous-archiving#BACKUP-LOWLEVEL-BASE-BACKUP"
+    ]
+  },
+  {
+    "id": "Q20",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "wal-configuration#WAL-CONFIGURATION",
+      "runtime-config-logging#GUC-LOG-CHECKPOINTS",
+      "runtime-config-wal#GUC-CHECKPOINT-WARNING",
+      "monitoring-stats#MONITORING-PG-STAT-CHECKPOINTER-VIEW",
+      "runtime-config-wal#GUC-CHECKPOINT-TIMEOUT"
+    ]
+  },
+  {
+    "id": "Q21",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "routine-vacuuming#VACUUM-FOR-SPACE-RECOVERY",
+      "manage-ag-tablespaces#MANAGE-AG-TABLESPACES",
+      "routine-vacuuming#VACUUM-FOR-WRAPAROUND",
+      "sql-vacuum#id-1.9.3.184.6",
+      "app-pgdump#PG-DUMP-OPTIONS"
+    ]
+  },
+  {
+    "id": "Q22",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "continuous-archiving#BACKUP-TIMELINES",
+      "manage-ag-config#MANAGE-AG-CONFIG",
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "runtime-config-client#GUC-TIMEZONE",
+      "runtime-config-logging#GUC-LOG-TIMEZONE"
+    ]
+  },
+  {
+    "id": "Q23",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "monitoring-locks#MONITORING-LOCKS",
+      "runtime-config-logging#GUC-LOG-LOCK-WAITS",
+      "monitoring-stats#MONITORING-PG-STAT-ACTIVITY-VIEW",
+      "monitoring-ps#MONITORING-PS",
+      "runtime-config-locks#GUC-DEADLOCK-TIMEOUT"
+    ]
+  },
+  {
+    "id": "Q24",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "runtime-config-client#GUC-IDLE-IN-TRANSACTION-SESSION-TIMEOUT",
+      "runtime-config-client#GUC-IDLE-SESSION-TIMEOUT",
+      "hot-standby#HOT-STANDBY-USERS",
+      "wal-async-commit#WAL-ASYNC-COMMIT",
+      "hot-standby#HOT-STANDBY-CAVEATS"
+    ]
+  },
+  {
+    "id": "Q25",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "upgrading#UPGRADING",
+      "pgupgrade#id-1.9.5.13.6",
+      "pgupgrade#id-1.9.5.13.7",
+      "logical-replication-upgrade#PREPARE-PUBLISHER-UPGRADES",
+      "warm-standby-failover#WARM-STANDBY-FAILOVER"
+    ]
+  },
+  {
+    "id": "Q26",
+    "mode": "vector",
+    "rank": 2,
+    "top5": [
+      "continuous-archiving#BACKUP-PITR-RECOVERY",
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "logical-replication-conflicts#LOGICAL-REPLICATION-CONFLICTS",
+      "runtime-config-replication#GUC-RECOVERY-MIN-APPLY-DELAY",
+      "continuous-archiving#CONTINUOUS-ARCHIVING"
+    ]
+  },
+  {
+    "id": "Q27",
+    "mode": "vector",
+    "rank": 7,
+    "top5": [
+      "high-availability#HIGH-AVAILABILITY",
+      "different-replication-solutions#DIFFERENT-REPLICATION-SOLUTIONS",
+      "logical-replication-restrictions#LOGICAL-REPLICATION-RESTRICTIONS",
+      "continuous-archiving#CONTINUOUS-ARCHIVING-CAVEATS",
+      "manage-ag-templatedbs#MANAGE-AG-TEMPLATEDBS"
+    ]
+  },
+  {
+    "id": "Q28",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "diskusage#DISK-USAGE",
+      "diskusage#DISKUSAGE",
+      "diskusage#DISK-FULL",
+      "manage-ag-tablespaces#MANAGE-AG-TABLESPACES",
+      "sql-analyze#id-1.9.3.46.6"
+    ]
+  },
+  {
+    "id": "Q29",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "backup-file#BACKUP-FILE",
+      "app-pgbasebackup#id-1.9.4.10.8",
+      "continuous-archiving#BACKUP-LOWLEVEL-BASE-BACKUP-DATA",
+      "app-pgbasebackup#id-1.9.4.10.5",
+      "continuous-archiving#BACKUP-LOWLEVEL-BASE-BACKUP"
+    ]
+  },
+  {
+    "id": "Q30",
+    "mode": "vector",
+    "rank": 4,
+    "top5": [
+      "encryption-options#ENCRYPTION-OPTIONS",
+      "ssh-tunnels#SSH-TUNNELS",
+      "preventing-server-spoofing#PREVENTING-SERVER-SPOOFING",
+      "ssl-tcp#SSL-SETUP",
+      "ssl-tcp#SSL-CLIENT-CERTIFICATES"
+    ]
+  },
+  {
+    "id": "Q31",
+    "mode": "vector",
+    "rank": null,
+    "top5": [
+      "monitoring-stats#MONITORING-PG-STAT-DATABASE-VIEW",
+      "monitoring-stats#MONITORING-PG-STAT-IO-VIEW",
+      "runtime-config-logging#GUC-LOG-STARTUP-PROGRESS-INTERVAL",
+      "runtime-config-connection#GUC-AUTHENTICATION-TIMEOUT",
+      "progress-reporting#VACUUM-PROGRESS-REPORTING"
+    ]
+  },
+  {
+    "id": "Q32",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "routine-vacuuming#VACUUM-FOR-WRAPAROUND",
+      "diskusage#DISK-FULL",
+      "sql-vacuum#id-1.9.3.184.8",
+      "routine-vacuuming#VACUUM-BASICS",
+      "sql-vacuum#id-1.9.3.184.5"
+    ]
+  },
+  {
+    "id": "Q33",
+    "mode": "vector",
+    "rank": 3,
+    "top5": [
+      "sql-analyze#id-1.9.3.46.8",
+      "predefined-roles#PREDEFINED-ROLE-PG-MONITOR",
+      "predefined-roles#PREDEFINED-ROLE-PG-READ-ALL-DATA",
+      "logical-replication-security#LOGICAL-REPLICATION-SECURITY",
+      "monitoring-stats#MONITORING-STATS-VIEWS"
+    ]
+  },
+  {
+    "id": "Q34",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "routine-vacuuming#VACUUM-FOR-STATISTICS",
+      "runtime-config-query#GUC-FROM-COLLAPSE-LIMIT",
+      "sql-vacuum#id-1.9.3.184.6",
+      "runtime-config-query#GUC-JOIN-COLLAPSE-LIMIT",
+      "runtime-config-query#RUNTIME-CONFIG-QUERY-ENABLE"
+    ]
+  },
+  {
+    "id": "Q35",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "runtime-config-logging#GUC-LOG-MIN-DURATION-STATEMENT",
+      "runtime-config-logging#GUC-LOG-MIN-DURATION-SAMPLE",
+      "runtime-config-wal#GUC-CHECKPOINT-TIMEOUT",
+      "runtime-config-logging#GUC-LOG-DURATION",
+      "runtime-config-logging#GUC-LOG-STARTUP-PROGRESS-INTERVAL"
+    ]
+  },
+  {
+    "id": "Q36",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "auth-pg-hba-conf#AUTH-PG-HBA-CONF",
+      "runtime-config-connection#GUC-RESERVED-CONNECTIONS",
+      "runtime-config-connection#GUC-LISTEN-ADDRESSES",
+      "runtime-config-connection#GUC-SUPERUSER-RESERVED-CONNECTIONS",
+      "runtime-config-connection#GUC-MAX-CONNECTIONS"
+    ]
+  },
+  {
+    "id": "Q37",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "role-removal#ROLE-REMOVAL",
+      "hot-standby#HOT-STANDBY-ADMIN",
+      "manage-ag-dropdb#MANAGE-AG-DROPDB",
+      "logical-replication-subscription#LOGICAL-REPLICATION-SUBSCRIPTION-SLOT",
+      "logical-replication-security#LOGICAL-REPLICATION-SECURITY"
+    ]
+  },
+  {
+    "id": "Q38",
+    "mode": "vector",
+    "rank": 5,
+    "top5": [
+      "logical-replication-col-lists#LOGICAL-REPLICATION-COL-LISTS",
+      "logical-replication-row-filter#LOGICAL-REPLICATION-ROW-FILTER-INITIAL-DATA-SYNC",
+      "logical-replication-subscription#LOGICAL-REPLICATION-SUBSCRIPTION",
+      "logical-replication-gencols#LOGICAL-REPLICATION-GENCOLS",
+      "logical-replication-conflicts#CONFLICT-INSERT-EXISTS"
+    ]
+  },
+  {
+    "id": "Q39",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "server-shutdown#SERVER-SHUTDOWN",
+      "app-pg-ctl#APP-PG-CTL-DESCRIPTION",
+      "app-pg-ctl#R2-APP-PGCTL-4",
+      "warm-standby-failover#WARM-STANDBY-FAILOVER",
+      "app-pg-ctl#APP-PG-CTL-OPTIONS"
+    ]
+  },
+  {
+    "id": "Q40",
+    "mode": "vector",
+    "rank": 3,
+    "top5": [
+      "app-pgbasebackup#id-1.9.4.10.5",
+      "warm-standby#SYNCHRONOUS-REPLICATION-HA",
+      "warm-standby#STREAMING-REPLICATION-MONITORING",
+      "monitoring-stats#MONITORING-PG-STAT-REPLICATION-VIEW",
+      "warm-standby#PREPARING-PRIMARY-FOR-STANDBY"
+    ]
+  },
+  {
+    "id": "Q41",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "collation#ICU-TAILORING-RULES",
+      "locale#LOCALE-OVERVIEW",
+      "creating-cluster#CREATING-CLUSTER",
+      "locale#LOCALE-BEHAVIOR",
+      "collation#ICU-COLLATION-SETTINGS"
+    ]
+  },
+  {
+    "id": "Q42",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "wal-async-commit#WAL-ASYNC-COMMIT",
+      "wal-configuration#WAL-CONFIGURATION",
+      "runtime-config-wal#GUC-SYNCHRONOUS-COMMIT",
+      "runtime-config-wal#GUC-COMMIT-DELAY",
+      "warm-standby#SYNCHRONOUS-REPLICATION-CONFIG"
+    ]
+  },
+  {
+    "id": "Q43",
+    "mode": "vector",
+    "rank": 2,
+    "top5": [
+      "runtime-config-vacuum#GUC-AUTOVACUUM",
+      "routine-vacuuming#AUTOVACUUM",
+      "routine-vacuuming#VACUUM-FOR-SPACE-RECOVERY",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-NAPTIME",
+      "routine-vacuuming#ROUTINE-VACUUMING"
+    ]
+  },
+  {
+    "id": "Q44",
+    "mode": "vector",
+    "rank": 7,
+    "top5": [
+      "continuous-archiving#BACKUP-LOWLEVEL-BASE-BACKUP-DATA",
+      "app-pgbasebackup#id-1.9.4.10.8",
+      "app-pgbasebackup#id-1.9.4.10.6",
+      "backup-file#BACKUP-FILE",
+      "app-pgbasebackup#id-1.9.4.10.5"
+    ]
+  },
+  {
+    "id": "Q45",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "internal/support-plan-limits#plan-limits",
+      "internal/support-plan-limits#answering-too-many-clients-already-tickets",
+      "runtime-config-connection#GUC-MAX-CONNECTIONS",
+      "runtime-config-connection#GUC-SUPERUSER-RESERVED-CONNECTIONS",
+      "runtime-config-connection#GUC-RESERVED-CONNECTIONS"
+    ]
+  },
+  {
+    "id": "Q46",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "internal/support-restore-requests#what-we-can-restore",
+      "continuous-archiving#BACKUP-PITR-RECOVERY",
+      "pgupgrade#id-1.9.5.13.7",
+      "continuous-archiving#BACKUP-LOWLEVEL-BASE-BACKUP-DATA",
+      "pgupgrade#id-1.9.5.13.9"
+    ]
+  },
+  {
+    "id": "Q47",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "internal/support-extensions#not-allowed",
+      "locale#LOCALE-PROVIDERS",
+      "auth-pam#AUTH-PAM",
+      "internal/support-restore-requests#example-ticket-for-training",
+      "app-pgdump#PG-DUMP-NOTES"
+    ]
+  },
+  {
+    "id": "Q48",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "internal/support-plan-limits#answering-too-many-clients-already-tickets",
+      "runtime-config-connection#GUC-PORT",
+      "runtime-config-connection#GUC-CLIENT-CONNECTION-CHECK-INTERVAL",
+      "warm-standby#STREAMING-REPLICATION-AUTHENTICATION",
+      "runtime-config-connection#GUC-BONJOUR"
+    ]
+  },
+  {
+    "id": "Q49",
+    "mode": "vector",
+    "rank": 1,
+    "top5": [
+      "internal/support-escalation#how-to-page-the-on-call-sre",
+      "internal/support-escalation#severity-levels",
+      "internal/support-restore-requests#example-ticket-for-training",
+      "warm-standby#SYNCHRONOUS-REPLICATION-CONFIG",
+      "monitoring-stats#MONITORING-PG-STAT-REPLICATION-VIEW"
+    ]
+  },
+  {
+    "id": "Q50",
+    "mode": "vector",
+    "rank": 2,
+    "top5": [
+      "internal/support-restore-requests#turnaround",
+      "internal/support-restore-requests#information-to-collect",
+      "internal/support-restore-requests#example-ticket-for-training",
+      "internal/support-restore-requests#what-we-can-restore",
+      "runtime-config-wal#GUC-RECOVERY-TARGET-TIME"
+    ]
+  },
+  {
+    "id": "Q01",
+    "mode": "hybrid",
+    "rank": null,
+    "top5": [
+      "runtime-config-logging#GUC-LOG-MIN-MESSAGES",
+      "kernel-resources#KERNEL-RESOURCES-LIMITS",
+      "runtime-config-logging#GUC-LOG-CONNECTIONS",
+      "runtime-config-client#GUC-CLIENT-MIN-MESSAGES",
+      "sql-createrole#id-1.9.3.78.6"
+    ]
+  },
+  {
+    "id": "Q02",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "runtime-config-client#GUC-IDLE-IN-TRANSACTION-SESSION-TIMEOUT",
+      "runtime-config-client#GUC-IDLE-SESSION-TIMEOUT",
+      "runtime-config-client#GUC-TRANSACTION-TIMEOUT",
+      "runtime-config-replication#GUC-IDLE-REPLICATION-SLOT-TIMEOUT",
+      "runtime-config-connection#GUC-TCP-USER-TIMEOUT"
+    ]
+  },
+  {
+    "id": "Q03",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "errcodes-appendix#ERRCODES-APPENDIX",
+      "server-start#SERVER-START-FAILURES",
+      "runtime-config-logging#GUC-LOG-LINE-PREFIX",
+      "runtime-config-logging#GUC-LOG-MIN-ERROR-STATEMENT",
+      "sql-createrole#id-1.9.3.78.6"
+    ]
+  },
+  {
+    "id": "Q04",
+    "mode": "hybrid",
+    "rank": 2,
+    "top5": [
+      "wal-configuration#WAL-CONFIGURATION",
+      "runtime-config-wal#GUC-MAX-WAL-SIZE",
+      "runtime-config-replication#GUC-MAX-SLOT-WAL-KEEP-SIZE",
+      "app-pgbasebackup#id-1.9.4.10.6",
+      "runtime-config-replication#GUC-WAL-KEEP-SIZE"
+    ]
+  },
+  {
+    "id": "Q05",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "runtime-config-wal#GUC-WAL-LEVEL",
+      "logical-replication-config#LOGICAL-REPLICATION-CONFIG-PUBLISHER",
+      "sql-altersystem#id-1.9.3.34.8",
+      "logical-replication-architecture#LOGICAL-REPLICATION-ARCHITECTURE",
+      "monitoring-stats#MONITORING-PG-STAT-REPLICATION-SLOTS-VIEW"
+    ]
+  },
+  {
+    "id": "Q06",
+    "mode": "hybrid",
+    "rank": 2,
+    "top5": [
+      "monitoring-stats#MONITORING-PG-STAT-DATABASE-VIEW",
+      "monitoring-stats#MONITORING-PG-STAT-ACTIVITY-VIEW",
+      "monitoring-ps#MONITORING-PS",
+      "monitoring-stats#MONITORING-STATS-VIEWS",
+      "hot-standby#HOT-STANDBY-ADMIN"
+    ]
+  },
+  {
+    "id": "Q07",
+    "mode": "hybrid",
+    "rank": 2,
+    "top5": [
+      "app-pgdump#PG-DUMP-DESCRIPTION",
+      "app-pgdump#PG-DUMP-OPTIONS",
+      "backup-dump#BACKUP-DUMP-LARGE",
+      "app-pgdump#APP-PGDUMP",
+      "app-pg-dumpall#APP-PG-DUMPALL-DESCRIPTION"
+    ]
+  },
+  {
+    "id": "Q08",
+    "mode": "hybrid",
+    "rank": 3,
+    "top5": [
+      "app-pgdump#PG-DUMP-DESCRIPTION",
+      "app-pgdump#PG-DUMP-OPTIONS",
+      "app-pgrestore#APP-PGRESTORE-OPTIONS",
+      "app-pgrestore#APP-PGRESTORE-DESCRIPTION",
+      "app-pgrestore#APP-PGRESTORE"
+    ]
+  },
+  {
+    "id": "Q09",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "auth-password#AUTH-PASSWORD",
+      "runtime-config-connection#GUC-PASSWORD-ENCRYPTION",
+      "auth-pg-hba-conf#AUTH-PG-HBA-CONF",
+      "runtime-config-connection#GUC-SCRAM-ITERATIONS",
+      "preventing-server-spoofing#PREVENTING-SERVER-SPOOFING"
+    ]
+  },
+  {
+    "id": "Q10",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "runtime-config-replication#GUC-HOT-STANDBY-FEEDBACK",
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "runtime-config-preset#GUC-IN-HOT-STANDBY",
+      "hot-standby#HOT-STANDBY-PARAMETERS",
+      "hot-standby#HOT-STANDBY-ADMIN"
+    ]
+  },
+  {
+    "id": "Q11",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "runtime-config-replication#GUC-MAX-SLOT-WAL-KEEP-SIZE",
+      "warm-standby#STREAMING-REPLICATION-SLOTS",
+      "runtime-config-replication#GUC-MAX-REPLICATION-SLOTS",
+      "logical-replication-config#LOGICAL-REPLICATION-CONFIG-PUBLISHER",
+      "runtime-config-wal#GUC-MAX-WAL-SIZE"
+    ]
+  },
+  {
+    "id": "Q12",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "sql-vacuum#id-1.9.3.184.5",
+      "sql-vacuum#id-1.9.3.184.6",
+      "routine-vacuuming#VACUUM-FOR-SPACE-RECOVERY",
+      "routine-vacuuming#VACUUM-BASICS",
+      "sql-vacuum#id-1.9.3.184.8"
+    ]
+  },
+  {
+    "id": "Q13",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "predefined-roles#PREDEFINED-ROLE-PG-READ-ALL-DATA",
+      "predefined-roles#PREDEFINED-ROLE-PG-MONITOR",
+      "predefined-roles#PREDEFINED-ROLE-PG-READ-SERVER-FILES",
+      "app-pg-dumpall#APP-PG-DUMPALL-DESCRIPTION",
+      "predefined-roles#PREDEFINED-ROLE-PG-MAINTAIN"
+    ]
+  },
+  {
+    "id": "Q14",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "runtime-config-client#GUC-STATEMENT-TIMEOUT",
+      "runtime-config-client#GUC-TRANSACTION-TIMEOUT",
+      "runtime-config-client#GUC-LOCK-TIMEOUT",
+      "runtime-config-client#GUC-IDLE-IN-TRANSACTION-SESSION-TIMEOUT",
+      "runtime-config-client#GUC-IDLE-SESSION-TIMEOUT"
+    ]
+  },
+  {
+    "id": "Q15",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "auth-pg-hba-conf#AUTH-PG-HBA-CONF",
+      "ssl-tcp#SSL-CLIENT-CERTIFICATES",
+      "auth-username-maps#AUTH-USERNAME-MAPS",
+      "gssapi-auth#GSSAPI-AUTH",
+      "encryption-options#ENCRYPTION-OPTIONS"
+    ]
+  },
+  {
+    "id": "Q16",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "sql-altersystem#id-1.9.3.34.5",
+      "config-setting#CONFIG-SETTING-CONFIGURATION-FILE",
+      "sql-altersystem#id-1.9.3.34.9",
+      "sql-altersystem#SQL-ALTERSYSTEM",
+      "runtime-config-compatible#GUC-ALLOW-ALTER-SYSTEM"
+    ]
+  },
+  {
+    "id": "Q17",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "runtime-config-vacuum#GUC-AUTOVACUUM-VACUUM-SCALE-FACTOR",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-VACUUM-INSERT-SCALE-FACTOR",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-ANALYZE-SCALE-FACTOR",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-VACUUM-MAX-THRESHOLD",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-VACUUM-THRESHOLD"
+    ]
+  },
+  {
+    "id": "Q18",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "sql-reindex#SQL-REINDEX-CONCURRENTLY",
+      "sql-reindex#id-1.9.3.163.6",
+      "sql-reindex#id-1.9.3.163.8",
+      "sql-reindex#SQL-REINDEX",
+      "progress-reporting#CREATE-INDEX-PROGRESS-REPORTING"
+    ]
+  },
+  {
+    "id": "Q19",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "app-pgbasebackup#id-1.9.4.10.6",
+      "app-pgbasebackup#id-1.9.4.10.8",
+      "progress-reporting#BASEBACKUP-PROGRESS-REPORTING",
+      "app-pgbasebackup#id-1.9.4.10.5",
+      "continuous-archiving#BACKUP-LOWLEVEL-BASE-BACKUP"
+    ]
+  },
+  {
+    "id": "Q20",
+    "mode": "hybrid",
+    "rank": 2,
+    "top5": [
+      "runtime-config-logging#GUC-LOG-CHECKPOINTS",
+      "runtime-config-wal#GUC-CHECKPOINT-WARNING",
+      "wal-configuration#WAL-CONFIGURATION",
+      "runtime-config-replication#GUC-IDLE-REPLICATION-SLOT-TIMEOUT",
+      "runtime-config-wal#GUC-CHECKPOINT-TIMEOUT"
+    ]
+  },
+  {
+    "id": "Q21",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "routine-vacuuming#VACUUM-FOR-SPACE-RECOVERY",
+      "sql-vacuum#id-1.9.3.184.6",
+      "sql-vacuum#id-1.9.3.184.8",
+      "routine-vacuuming#VACUUM-FOR-WRAPAROUND",
+      "routine-vacuuming#VACUUM-FOR-STATISTICS"
+    ]
+  },
+  {
+    "id": "Q22",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "continuous-archiving#BACKUP-TIMELINES",
+      "continuous-archiving#BACKUP-PITR-RECOVERY",
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "continuous-archiving#CONTINUOUS-ARCHIVING",
+      "backup-dump#BACKUP-DUMP-RESTORE"
+    ]
+  },
+  {
+    "id": "Q23",
+    "mode": "hybrid",
+    "rank": 3,
+    "top5": [
+      "runtime-config-logging#GUC-LOG-LOCK-WAITS",
+      "monitoring-ps#MONITORING-PS",
+      "monitoring-stats#MONITORING-PG-STAT-ACTIVITY-VIEW",
+      "monitoring-locks#MONITORING-LOCKS",
+      "runtime-config-locks#GUC-DEADLOCK-TIMEOUT"
+    ]
+  },
+  {
+    "id": "Q24",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "runtime-config-client#GUC-IDLE-IN-TRANSACTION-SESSION-TIMEOUT",
+      "runtime-config-client#GUC-IDLE-SESSION-TIMEOUT",
+      "runtime-config-locks#GUC-MAX-LOCKS-PER-TRANSACTION",
+      "hot-standby#HOT-STANDBY-USERS",
+      "hot-standby#HOT-STANDBY-CAVEATS"
+    ]
+  },
+  {
+    "id": "Q25",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "upgrading#UPGRADING",
+      "upgrading#UPGRADING-VIA-REPLICATION",
+      "pgupgrade#id-1.9.5.13.7",
+      "pgupgrade#id-1.9.5.13.6",
+      "warm-standby#STANDBY-PLANNING"
+    ]
+  },
+  {
+    "id": "Q26",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "runtime-config-logging#GUC-LOG-RECOVERY-CONFLICT-WAITS",
+      "runtime-config-replication#GUC-RECOVERY-MIN-APPLY-DELAY",
+      "logical-replication-conflicts#LOGICAL-REPLICATION-CONFLICTS",
+      "continuous-archiving#BACKUP-PITR-RECOVERY"
+    ]
+  },
+  {
+    "id": "Q27",
+    "mode": "hybrid",
+    "rank": null,
+    "top5": [
+      "warm-standby#WARM-STANDBY",
+      "different-replication-solutions#DIFFERENT-REPLICATION-SOLUTIONS",
+      "app-pgdump#PG-DUMP-OPTIONS",
+      "high-availability#HIGH-AVAILABILITY",
+      "pgupgrade#id-1.9.5.13.9"
+    ]
+  },
+  {
+    "id": "Q28",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "diskusage#DISK-USAGE",
+      "routine-vacuuming#VACUUM-FOR-SPACE-RECOVERY",
+      "manage-ag-tablespaces#MANAGE-AG-TABLESPACES",
+      "runtime-config-resource#GUC-WORK-MEM",
+      "routine-vacuuming#VACUUM-FOR-MULTIXACT-WRAPAROUND"
+    ]
+  },
+  {
+    "id": "Q29",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "backup-file#BACKUP-FILE",
+      "continuous-archiving#BACKUP-PITR-RECOVERY",
+      "continuous-archiving#BACKUP-LOWLEVEL-BASE-BACKUP-DATA",
+      "app-pgbasebackup#id-1.9.4.10.8",
+      "app-pgbasebackup#id-1.9.4.10.5"
+    ]
+  },
+  {
+    "id": "Q30",
+    "mode": "hybrid",
+    "rank": 8,
+    "top5": [
+      "ssh-tunnels#SSH-TUNNELS",
+      "preventing-server-spoofing#PREVENTING-SERVER-SPOOFING",
+      "encryption-options#ENCRYPTION-OPTIONS",
+      "gssapi-enc#GSSAPI-SETUP",
+      "ssl-tcp#SSL-CLIENT-CERTIFICATES"
+    ]
+  },
+  {
+    "id": "Q31",
+    "mode": "hybrid",
+    "rank": null,
+    "top5": [
+      "backup-dump#BACKUP-DUMP-RESTORE",
+      "monitoring-stats#MONITORING-PG-STAT-DATABASE-VIEW",
+      "server-start#SERVER-START",
+      "monitoring-stats#MONITORING-PG-STAT-IO-VIEW",
+      "runtime-config-logging#GUC-LOG-STARTUP-PROGRESS-INTERVAL"
+    ]
+  },
+  {
+    "id": "Q32",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "routine-vacuuming#VACUUM-FOR-WRAPAROUND",
+      "routine-vacuuming#AUTOVACUUM",
+      "sql-vacuum#id-1.9.3.184.8",
+      "sql-vacuum#id-1.9.3.184.6",
+      "routine-vacuuming#VACUUM-FOR-MULTIXACT-WRAPAROUND"
+    ]
+  },
+  {
+    "id": "Q33",
+    "mode": "hybrid",
+    "rank": null,
+    "top5": [
+      "sql-grant#SQL-GRANT-NOTES",
+      "sql-grant#SQL-GRANT-COMPATIBILITY",
+      "sql-analyze#id-1.9.3.46.5",
+      "logical-replication-security#LOGICAL-REPLICATION-SECURITY",
+      "predefined-roles#PREDEFINED-ROLE-PG-MONITOR"
+    ]
+  },
+  {
+    "id": "Q34",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "routine-vacuuming#VACUUM-FOR-STATISTICS",
+      "runtime-config-query#GUC-FROM-COLLAPSE-LIMIT",
+      "runtime-config-query#GUC-JOIN-COLLAPSE-LIMIT",
+      "runtime-config-query#GUC-RANDOM-PAGE-COST",
+      "runtime-config-wal#GUC-WAL-LEVEL"
+    ]
+  },
+  {
+    "id": "Q35",
+    "mode": "hybrid",
+    "rank": 3,
+    "top5": [
+      "runtime-config-logging#GUC-LOG-STARTUP-PROGRESS-INTERVAL",
+      "runtime-config-logging#GUC-LOG-DURATION",
+      "runtime-config-logging#GUC-LOG-MIN-DURATION-STATEMENT",
+      "runtime-config-logging#GUC-LOG-MIN-DURATION-SAMPLE",
+      "wal-configuration#WAL-CONFIGURATION"
+    ]
+  },
+  {
+    "id": "Q36",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "auth-pg-hba-conf#AUTH-PG-HBA-CONF",
+      "runtime-config-connection#GUC-LISTEN-ADDRESSES",
+      "runtime-config-preset#GUC-NUM-OS-SEMAPHORES",
+      "runtime-config-connection#GUC-RESERVED-CONNECTIONS",
+      "app-pgbasebackup#id-1.9.4.10.5"
+    ]
+  },
+  {
+    "id": "Q37",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "role-removal#ROLE-REMOVAL",
+      "hot-standby#HOT-STANDBY-ADMIN",
+      "logical-replication-subscription#LOGICAL-REPLICATION-SUBSCRIPTION-SLOT",
+      "logical-replication-subscription#LOGICAL-REPLICATION-SUBSCRIPTION",
+      "database-roles#DATABASE-ROLES"
+    ]
+  },
+  {
+    "id": "Q38",
+    "mode": "hybrid",
+    "rank": 2,
+    "top5": [
+      "logical-replication-row-filter#LOGICAL-REPLICATION-ROW-FILTER-INITIAL-DATA-SYNC",
+      "logical-replication-conflicts#CONFLICT-INSERT-EXISTS",
+      "logical-replication-conflicts#CONFLICT-UPDATE-EXISTS",
+      "logical-replication-subscription#LOGICAL-REPLICATION-SUBSCRIPTION",
+      "logical-replication-col-lists#LOGICAL-REPLICATION-COL-LISTS"
+    ]
+  },
+  {
+    "id": "Q39",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "server-shutdown#SERVER-SHUTDOWN",
+      "warm-standby#SYNCHRONOUS-REPLICATION-CONFIG",
+      "runtime-config-wal#GUC-RECOVERY-TARGET-ACTION",
+      "app-pg-ctl#R2-APP-PGCTL-4",
+      "preventing-server-spoofing#PREVENTING-SERVER-SPOOFING"
+    ]
+  },
+  {
+    "id": "Q40",
+    "mode": "hybrid",
+    "rank": null,
+    "top5": [
+      "hot-standby#HOT-STANDBY-PARAMETERS",
+      "runtime-config-replication#GUC-PRIMARY-CONNINFO",
+      "hot-standby#HOT-STANDBY-CONFLICT",
+      "warm-standby#PREPARING-PRIMARY-FOR-STANDBY",
+      "runtime-config-preset#GUC-IN-HOT-STANDBY"
+    ]
+  },
+  {
+    "id": "Q41",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "collation#ICU-TAILORING-RULES",
+      "locale#LOCALE-OVERVIEW",
+      "creating-cluster#CREATING-CLUSTER",
+      "collation#ICU-CUSTOM-COLLATIONS",
+      "collation#ICU-COLLATION-SETTINGS"
+    ]
+  },
+  {
+    "id": "Q42",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "wal-async-commit#WAL-ASYNC-COMMIT",
+      "warm-standby#SYNCHRONOUS-REPLICATION-CONFIG",
+      "runtime-config-wal#GUC-SYNCHRONOUS-COMMIT",
+      "app-pgdump#PG-DUMP-OPTIONS",
+      "runtime-config-replication#GUC-RECOVERY-MIN-APPLY-DELAY"
+    ]
+  },
+  {
+    "id": "Q43",
+    "mode": "hybrid",
+    "rank": 4,
+    "top5": [
+      "runtime-config-vacuum#GUC-AUTOVACUUM",
+      "runtime-config-vacuum#GUC-AUTOVACUUM-NAPTIME",
+      "routine-vacuuming#ROUTINE-VACUUMING",
+      "routine-vacuuming#AUTOVACUUM",
+      "routine-vacuuming#VACUUM-FOR-STATISTICS"
+    ]
+  },
+  {
+    "id": "Q44",
+    "mode": "hybrid",
+    "rank": 4,
+    "top5": [
+      "continuous-archiving#BACKUP-LOWLEVEL-BASE-BACKUP-DATA",
+      "backup-file#BACKUP-FILE",
+      "app-pgbasebackup#id-1.9.4.10.8",
+      "continuous-archiving#BACKUP-BASE-BACKUP",
+      "app-pgbasebackup#id-1.9.4.10.5"
+    ]
+  },
+  {
+    "id": "Q45",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "internal/support-plan-limits#plan-limits",
+      "internal/support-plan-limits#answering-too-many-clients-already-tickets",
+      "internal/support-plan-limits#overview",
+      "runtime-config-client#GUC-GIN-FUZZY-SEARCH-LIMIT",
+      "kernel-resources#KERNEL-RESOURCES-LIMITS"
+    ]
+  },
+  {
+    "id": "Q46",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "internal/support-restore-requests#what-we-can-restore",
+      "continuous-archiving#BACKUP-PITR-RECOVERY",
+      "continuous-archiving#BACKUP-LOWLEVEL-BASE-BACKUP-DATA",
+      "pgupgrade#id-1.9.5.13.7",
+      "backup-file#BACKUP-FILE"
+    ]
+  },
+  {
+    "id": "Q47",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "internal/support-extensions#not-allowed",
+      "internal/support-plan-limits#answering-too-many-clients-already-tickets",
+      "locale#LOCALE-PROVIDERS",
+      "internal/support-restore-requests#what-we-can-restore",
+      "auth-pam#AUTH-PAM"
+    ]
+  },
+  {
+    "id": "Q48",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "internal/support-plan-limits#answering-too-many-clients-already-tickets",
+      "runtime-config-connection#GUC-PORT",
+      "auth-ldap#AUTH-LDAP",
+      "app-pg-dumpall#id-1.9.4.15.6",
+      "runtime-config-replication#GUC-PRIMARY-CONNINFO"
+    ]
+  },
+  {
+    "id": "Q49",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "internal/support-escalation#how-to-page-the-on-call-sre",
+      "internal/support-escalation#severity-levels",
+      "internal/support-restore-requests#example-ticket-for-training",
+      "runtime-config-resource#GUC-HUGE-PAGES",
+      "warm-standby#SYNCHRONOUS-REPLICATION-CONFIG"
+    ]
+  },
+  {
+    "id": "Q50",
+    "mode": "hybrid",
+    "rank": 1,
+    "top5": [
+      "internal/support-restore-requests#information-to-collect",
+      "internal/support-restore-requests#example-ticket-for-training",
+      "internal/support-restore-requests#turnaround",
+      "continuous-archiving#BACKUP-PITR-RECOVERY",
+      "internal/support-restore-requests#what-we-can-restore"
+    ]
+  }
+]
